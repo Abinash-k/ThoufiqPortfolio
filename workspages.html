@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoufiq - Product Designer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* font-family: 'Helvetica Neue', Arial, sans-serif; */
+            /* body { */
+  font-family: 'Helvetica Neue', Arial, 'Roboto', 'Proxima Nova', 'Open Sans', sans-serif;
+/* } */
+
+            background-color: #181818;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #141414;
+            padding: 20px;
+            height: 100vh;
+            overflow-y: auto;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+            z-index: 200;
+        }
+
+        .sidebar .profile {
+            display: flex;
+    align-items: center;
+    /* background-color: #181818; */
+    /* border-bottom: 1px solid #888; */
+    margin-left: -10px;
+    gap: 9px;
+    padding-left: 0px;
+            /* position: relative; */
+        }
+
+        .sidebar .profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .sidebar .profile h2 {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .sidebar .profile p {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .sidebar nav {
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+
+        .sidebar nav a {
+            color: #888;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-bottom: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar nav a i {
+            margin-right: 12px;
+        }
+
+        .sidebar nav a:hover {
+            background-color: #282828;
+            color: #fff;
+        }
+
+        .explore {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid #5555554c;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.explore:hover {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+.explore.active {
+    background-color: transparent;
+    color: #888;
+}
+
+
+        .sidebar .resources,
+        .sidebar .socials {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar .resources a,
+        .sidebar .socials a {
+            color: #888;
+            text-decoration: none;
+            padding: 8px 12px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            border-radius: 6px;
+            box-sizing: border-box;
+            transition: color 0.3s;
+            margin-bottom: 0px;
+        }
+
+        .sidebar .resources a i,
+        .sidebar .socials a i {
+            margin-right: 12px;
+        }
+
+        .sidebar .resources a:hover,
+        .sidebar .socials a:hover {
+            color: #fff;
+        }
+
+        .sidebar .heading {
+            text-transform: uppercase;
+            font-size: 12px;
+            color: #888;
+            margin: 10px 0 5px 0;
+            padding-left: 10px;
+        }
+
+        .main-content {
+            
+            padding: 20px;
+            text-align: left;
+            justify-content: left;
+            overflow-y: auto;
+            height: 100vh;
+            margin-left: 500px;
+          
+            padding-right: 400px;
+            margin-top: 0;
+            transition: margin-left 0.3s ease;
+         
+        }
+
+        
+.res-profile {
+    display: flex;
+    align-items: center;
+    background-color: #181818;
+    border-bottom: 1px solid #888;
+    margin-left: 10px;
+    padding-left: 0px;
+    /* margin-left: 0px; */
+    /* margin-top: 10px; */
+}
+
+.res-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.res-head{
+    /* padding-left: 20px; */
+    margin-top: -25px;
+    margin-left: -30px;
+    width: 98.5%;
+    background-color: transparent;
+    /* margin-right: -20px; */
+    justify-content: start;
+    display: none;
+    position: fixed;
+}
+
+.res-profile h2  {
+    /* margin: 5px 0; */
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.res-profile p{
+    font-size: 12px;
+    color: #888;
+}
+        .typing{
+            color: rgb(255, 132, 0);
+        }
+        .main-content-top{
+            margin-top: 0px;
+            margin-left: 50px;
+            justify-content: start;
+        }
+
+        .ready-to-interview {
+            display: inline-flex;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            border-radius: 25px;
+            padding: 5px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            position: relative;
+            margin-bottom: 20px;
+            z-index: -1;
+        }
+
+        .ready-to-interview::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: #00ff00;
+            border-radius: 50%;
+            margin-right: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .ready-to-interview:hover::before {
+            box-shadow: 0 0 20px rgba(0, 255, 0, 1);
+        }
+        .main-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .main-content p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .btn-container .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-container .btn i {
+            margin-right: 8px;
+        }
+
+        .btn-container .btn-primary {
+            background-color: #1DB954;
+            color: #fff;
+        }
+
+        .btn-container .btn-secondary {
+            background-color: #6c757d;
+            color: #fff;
+        }
+
+        .btn-container .btn:hover {
+            transform: scale(1.05);
+        }
+        .custom-button {
+    position: relative; /* Required for positioning the pseudo-element */
+    background-color: #e45800;
+    color: #fff;
+    padding: 15px 25px;
+    border-top: 1.5px solid #ffa500;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* .custom-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0.2rem; /* Height of the lighter line */
+            /* background-color: #ffa500; /* Lighter orange color */
+            /* border-top-left-radius: 10px; */
+            /* border-top-right-radius: 10px; */
+        /* }  */
+
+        
+        .featured-work {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+            padding-left: 0;
+            max-width: 100%;
+        }
+
+        .featured-work-item {
+            background-color: transparent;
+            /* #141414 */
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: left;
+            width: calc(33.333% - 20px);
+            /* display: flex;
+            flex-wrap: wrap; */
+            /* flex-grow: 1;
+            flex-basis: 200; */
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .featured-work-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .work-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .work-title {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .work-company {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #888;
+        }
+
+        .case-study-btn {
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #888;
+            border-radius: 5px;
+            padding: 5px 10px;
+            /* margin-top: -15px; */
+            width: 60%;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            align-self: flex-start;
+            /* top: 50px; */
+        }
+
+        .case-study-btn:hover {
+            background-color: #1DB954;
+            border-color: #1DB954;
+            color: #000;
+        }
+
+        .work-tags {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .work-tags span {
+            background-color: #282828;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .hamburger {
+            display: none;
+            position: fixed;
+            top: 15px;
+            right: 25px;
+            z-index: 1000;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .hamburger i {
+            font-size: 1.5rem;
+        }
+
+        .featured-work-heading {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            margin-top: 60px;
+            margin-bottom: 20px;
+            text-align: start;
+        }
+
+/* MainContents */
+.container {
+    max-width: 900px;
+    /* margin: 0 auto; */
+    padding: 20px;
+    text-align: left; /* Center the content */
+    justify-content: center;
+}
+
+.back-link a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+ .project-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+} 
+
+
+.image-container{
+    border-radius: 20px;
+}
+
+.details-container {
+    /* max-width: 1000px; */
+    width: 100%;
+    /* margin: 0 auto; */
+    padding: 20px;
+    padding-left: 10px;
+    margin-left: -10px;
+    align-items: center;
+    /* margin-right: 500px; */
+}
+
+h2 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: whitesmoke;
+}
+
+p {
+    font-size: 0.3rem;
+    line-height: 1.5;
+    color: white;
+}
+
+.intro, .challenge, .collaboration {
+    margin-bottom: 20px;
+}
+
+.screenshots {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+.screenshots img {
+    /* max-width: 100%; */
+    width: 100%;
+    height: auto;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+        /* .work-item div {
+            padding: 20px;
+        }
+        .work-item h3 {
+            margin: 0;
+            text-align: left;
+            margin-right: 190px;
+        }
+        .work-item p {
+            margin: 10px 0;
+            text-align: start;
+        } */
+/* Footer */
+
+footer {
+    background-color: transparent;
+    padding: 2px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    padding-bottom: 20px;
+}
+
+footer p {
+    margin: 0;
+    color: #bbbbbb;
+}
+
+footer a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+.phone-footer {
+            background-color: #181818;
+            border-top: 1px solid #888;
+            margin-left: -20px;
+            /* margin-right: 20px; */
+            width: 96.5%;
+            height: 45px;
+            /* display: none; */
+            /* margin-top: 20px; */
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+        }
+        .phone-footer a {
+            text-decoration: none;
+            color: #888;
+            text-align: center;
+            flex: 1;
+        }
+
+        @media (min-width:520px) {
+            .phone-footer{
+                display: none;
+            }
+        }
+
+@media (min-width:1000px) and (max-width:1200px){
+.details-container{
+    width: 100%;
+    /* margin-left: 200px; */
+}
+
+.main-content{
+    padding-right: 10px;
+    margin-left: 25%;
+}
+}
+        @media (max-width: 1000px) {
+            /* .sidebar {
+                transform: translateX(-100%);
+                display: none;
+            } */
+            .sidebar {
+                transform: translateX(-100%);
+                display: none;
+            }
+            .sidebar.open{
+                transform: translateX(0);
+            }
+            .details-container{
+    width: 100%;
+    /* margin-left: 200px; */
+}
+            .hamburger {
+                display: block;
+            }
+           
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+                padding: 20px;
+            }
+
+            .res-head{
+                display: block;
+                /* transform: translateX(-100%); */
+            }
+
+            .featured-work {
+                padding-left: 0;
+                width: 100%;
+            }
+
+            .featured-work-item {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 20px;
+                text-align: left;
+                /* padding-right: 15%;
+                margin-left: 35%; */
+            }
+
+            .res-head{
+                width: 98.5%;
+            }
+
+
+            .featured-work {
+                padding-left: 0;
+                width: 100%;
+            }
+
+            .featured-work-item {
+                width: calc(50% - 20px);
+            }
+
+            .btn-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        @media (max-width:720px){
+            .res-head{
+                width: 98%;
+            }
+        }
+
+        @media (max-width: 600px) {
+    .work-item {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start horizontally */
+    }
+    .work-item img {
+        max-width: 100%; /* Make image full width */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 12px; /* Add bottom margin to separate from text */
+    }
+    .case-study {
+        align-self: flex-start; /* Align case-study link to the start */
+        margin-top: 12px; /* Add top margin */
+    }
+}
+        @media (max-width: 480px) {
+            .featured-work-item {
+                flex-grow: 1;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="sidebar">
+        <div class="profile">
+            <img src="https://images.pexels.com/photos/6000789/pexels-photo-6000789.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Vedant Jamwal">
+            <h2>Thoufiq M<p>Product Designer<br></p></h2>
+        <!-- </div> -->
+        <!-- <div class="profile-p"> -->
+            <!-- <p>Product Designer<br></p> -->
+        </div>
+        <nav>
+            <a href="index.html"><i class="fas fa-compass"></i> Explore</a>
+            <a href="#" class="explore active"><i class="fas fa-briefcase"></i> Work</a>
+            <!-- <a href="#"><i class="fas fa-store"></i> Boutique <span style="background-color: #1DB954; border-radius: 8px; padding: 2px 5px; font-size: 12px; margin-left: 5px;">NEW</span></a> -->
+            <a href="#"> <i class="fa-brands fa-youtube"></i>Youtube Journey</a>
+            <!-- <a href="#"><i class="fa-solid fa-person"></i>Testimonails</a> -->
+            <a href="Stack.html"><i class="fas fa-cogs"></i>Tech Stack</a>
+        </nav>
+        <div class="heading">About Me</div>
+        <div class="resources">
+            <a href="#"><i class="fa-solid fa-address-card"></i>About Me</a>
+            <!-- <a href="#"><i class="fa-solid fa-chess-king"></i>Experiences</a> -->
+            <!-- <a href="#"><i class="fa-solid fa-computer"></i>Skills</a> -->
+        </div>
+        <div class="heading">Resources</div>
+        <div class="resources">
+            <a href="#"><i class="fas fa-file-alt"></i> Resume</a>
+            <a href="#"><i class="fas fa-calendar-alt"></i> Book a call</a>
+        </div>
+        <div class="heading">Socials</div>
+        <div class="socials">
+            <a href="https://www.youtube.com/@ThoufiqM_"> <i class="fa-brands fa-youtube"></i>Youtube</a>
+            <!-- <a href="#"><i class="fab fa-dribbble"></i> Youtube</a> -->
+            <a href="#"><i class="fab fa-behance"></i> Behance</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="res-head">
+            <div class="res-profile">
+                <img src="https://images.pexels.com/photos/6000789/pexels-photo-6000789.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="ThoufiqM_">
+                <h2 >Thoufiq M<p style="font-size: 12px; color: #888;">Product Designer<br></p></h2>
+            <!-- </div> -->
+            <!-- <div class="profile-p"> -->
+                <!-- <p>Product Designer<br></p> -->
+            </div>
+        </div>
+        <div class="container">
+            <div class="back-link" style="padding-top:50px;">
+                <a href="Allworks.html">← All Projects</a>
+            </div>
+            <h1 class="project-title">Lead Designer — Memri <br>Connect (Regenerative AI)</h1>
+            <!-- <div class="image-container">
+                <img src="https://imgs.search.brave.com/FtJ0f51iAzqo8bsJVqsJNiiH-LgnTHdYXOomJwCmL9w/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/YS1kcm9wLW9mLXBp/bmstYW5kLXllbGxv/dy1wYWludC1pbi13/YXRlci5qcGc_d2lk/dGg9MTAwMCZmb3Jt/YXQ9cGpwZyZleGlm/PTAmaXB0Yz0w" alt="Memri Connect Project">
+            </div> -->
+
+            <div class="details-container">
+                <section class="screenshots">
+                    <img src="https://imgs.search.brave.com/FtJ0f51iAzqo8bsJVqsJNiiH-LgnTHdYXOomJwCmL9w/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/YS1kcm9wLW9mLXBp/bmstYW5kLXllbGxv/dy1wYWludC1pbi13/YXRlci5qcGc_d2lk/dGg9MTAwMCZmb3Jt/YXQ9cGpwZyZleGlm/PTAmaXB0Yz0w" alt="Memri Connect Screenshots">
+                </section>
+
+                <section class="intro">
+                    <h2>What is Memri Connect?</h2>
+                    <p style="font-size: 0.8rem;">Memri Connect is a smart technology that helps you take control of your data and make smarter choices in life. In short, helps you weed out the noise and focus on the most important things in shorter time and connect with the people that are most important to you dfvdmge geregkmrfvm rfvmkdfvm rvmdf.</p>
+                </section>
+        
+                <section class="challenge">
+                    <h2>Central Challenge</h2>
+                    <p  style="font-size: 0.8rem;">The main focus was to create a mobile app that smoothly brings together data and relationships. This app uses both individually and collectively trained smart features to customize your experience.</p>
+                </section>
+        
+                <section class="screenshots">
+                    <img src="https://imgs.search.brave.com/FtJ0f51iAzqo8bsJVqsJNiiH-LgnTHdYXOomJwCmL9w/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/YS1kcm9wLW9mLXBp/bmstYW5kLXllbGxv/dy1wYWludC1pbi13/YXRlci5qcGc_d2lk/dGg9MTAwMCZmb3Jt/YXQ9cGpwZyZleGlm/PTAmaXB0Yz0w" alt="Memri Connect Screenshots">
+                </section>
+        
+                <section class="collaboration">
+                    <h2>Cross-functional Collaboration</h2>
+                    <p  style="font-size: 0.8rem;">I worked closely with the founder and the team responsible for building the project from the very beginning. This ensured that communication between us was clear and effective. Since the project was new and innovative, good communication was especially important because we were all new to the process.</p>
+                </section>
+
+                <section class="collaboration">
+                    <h2>Cross-functional Collaboration</h2>
+                    <p  style="font-size: 0.8rem;">I worked closely with the founder and the team responsible for building the project from the very beginning. This ensured that communication between us was clear and effective. Since the project was new and innovative, good communication was especially important because we were all new to the process.</p>
+                </section>
+
+                <section class="screenshots">
+                    <img src="https://imgs.search.brave.com/FtJ0f51iAzqo8bsJVqsJNiiH-LgnTHdYXOomJwCmL9w/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/YS1kcm9wLW9mLXBp/bmstYW5kLXllbGxv/dy1wYWludC1pbi13/YXRlci5qcGc_d2lk/dGg9MTAwMCZmb3Jt/YXQ9cGpwZyZleGlm/PTAmaXB0Yz0w" alt="Memri Connect Screenshots">
+                </section>
+
+                <section class="collaboration">
+                    <h2>Cross-functional Collaboration</h2>
+                    <p  style="font-size: 0.8rem;">I worked closely with the founder and the team responsible for building the project from the very beginning. This ensured that communication between us was clear and effective. Since the project was new and innovative, good communication was especially important because we were all new to the process.</p>
+                </section>
+
+                <section class="collaboration">
+                    <h2>Cross-functional Collaboration</h2>
+                    <p  style="font-size: 0.8rem;">I worked closely with the founder and the team responsible for building the project from the very beginning. This ensured that communication between us was clear and effective. Since the project was new and innovative, good communication was especially important because we were all new to the process.</p>
+                </section>
+
+                <section class="screenshots">
+                    <img src="https://imgs.search.brave.com/FtJ0f51iAzqo8bsJVqsJNiiH-LgnTHdYXOomJwCmL9w/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/YS1kcm9wLW9mLXBp/bmstYW5kLXllbGxv/dy1wYWludC1pbi13/YXRlci5qcGc_d2lk/dGg9MTAwMCZmb3Jt/YXQ9cGpwZyZleGlm/PTAmaXB0Yz0w" alt="Memri Connect Screenshots">
+                </section>
+
+                <p style="font-size: 0.8rem; padding-top: 20px; padding-bottom: 20px;">Want to see full Figma Design file and project walkthrough. Book a call with me 👇</p>
+                <a href="#" style="background-color: white; color: black; padding: 15px 25px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-decoration: none; text-align: center;">Book A Call</a>
+                <a href="#" style="background-color: transparent; border: 1px solid #888; color: #fff; padding: 15px 25px; border-radius: 5px; font-size: 16px; cursor: pointer; text-decoration: none; text-align: center;">Memri's Linkedin</a>
+            </div>
+
+            <!-- <div class="sections">What is Mermi?<br>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Nihil assumenda deleniti impedit nisi aliquam! Accusantium commodi vitae adipisci, fuga ipsam nam ea sit cum omnis recusandae praesentium enim sint tempora!<br></div> -->
+            <!-- <div class="sections-paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi quas, nemo et provident rerum dolorem hic expedita alias? Ratione, neque. Dolor quibusdam nam soluta exercitationem reprehenderit esse vero saepe quod.</div> -->
+           
+        </div>
+
+        <footer>
+            <p>Lets <a href="#">Chat</a> ◦ ©2023 Portfolio</p>
+        </footer>
+
+        <!-- Phone Footer -->
+         <div class="phone-footer">
+            <!-- <p>Let's <a href="#">Chat</a> ◦ 2023 Portfolio -->
+                <a href="https://www.youtube.com/@ThoufiqM_"> <i class="fa-brands fa-youtube"></i>Youtube</a>
+                <!-- <a href="#"><i class="fab fa-dribbble"></i> Youtube</a> -->
+                <a href="#"><i class="fab fa-behance"></i> Behance</a>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+
+         </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        
+        const hamburger = document.querySelector('.hamburger');
+        const sidebar = document.querySelector('.sidebar');
+        let sidebarOpen = false;
+
+        hamburger.addEventListener('click', () => {
+            sidebarOpen = !sidebarOpen;
+            if (sidebarOpen) {
+                sidebar.style.transform = 'translateX(0)';
+                sidebar.style.display = 'flex';
+            } else {
+                sidebar.style.transform = 'translateX(-100%)';
+                sidebar.style.display = 'none';
+            }
+        });
+
+       
+    </script>
+</body>
+</html>

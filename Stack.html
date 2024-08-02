@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoufiq - Product Designer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* font-family: 'Helvetica Neue', Arial, sans-serif; */
+            /* body { */
+  font-family: 'Helvetica Neue', Arial, 'Roboto', 'Proxima Nova', 'Open Sans', sans-serif;
+/* } */
+
+            background-color: #181818;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #141414;
+            padding: 20px;
+            height: 100vh;
+            overflow-y: auto;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+            z-index: 200;
+        }
+
+        .sidebar .profile {
+            /* text-align: center;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px; */
+
+            display: flex;
+    align-items: center;
+    /* background-color: #181818; */
+    /* border-bottom: 1px solid #888; */
+    margin-left: -10px;
+    gap: 9px;
+    padding-left: 0px;
+    margin-top: -8px;
+        }
+
+        .sidebar .profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-top: -20px;
+        }
+
+        .sidebar .profile h2 {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #fff;
+            margin-top: 25px;
+        }
+
+        .sidebar .profile p {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .sidebar nav {
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+
+        .sidebar nav a {
+            color: #888;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-bottom: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar nav a i {
+            margin-right: 12px;
+        }
+
+        .sidebar nav a:hover {
+            background-color: #282828;
+            color: #fff;
+        }
+
+        .sidebar .resources,
+        .sidebar .socials {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar .resources a,
+        .sidebar .socials a {
+            color: #888;
+            text-decoration: none;
+            padding: 8px 12px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            border-radius: 6px;
+            box-sizing: border-box;
+            transition: color 0.3s;
+            margin-bottom: 0px;
+        }
+
+        .sidebar .resources a i,
+        .sidebar .socials a i {
+            margin-right: 12px;
+        }
+
+        .sidebar .resources a:hover,
+        .sidebar .socials a:hover {
+            color: #fff;
+        }
+
+        .sidebar .heading {
+            text-transform: uppercase;
+            font-size: 12px;
+            color: #888;
+            margin: 10px 0 5px 0;
+            padding-left: 10px;
+        }
+
+        .explore {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid #5555554c;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.explore:hover {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+.explore.active {
+    background-color: transparent;
+    color: #888;
+}
+
+
+        .main-content {
+            /* padding-top: 10px; */
+            /* padding: 20px; */
+            text-align: center;
+            overflow-y: auto;
+            height: 100vh;
+            /* justify-content: center; */
+            margin-left: 470px;
+            /* padding-right: 180px; */
+            margin-top: 4px;
+            transition: margin-left 0.3s ease;
+            /* padding-left: 220px; */
+        }
+
+
+  
+
+
+.res-profile {
+    display: flex;
+    align-items: center;
+    background-color: #181818;
+    border-bottom: 1px solid #888;
+    margin-left: 10px;
+    padding-left: 0px;
+    /* margin-left: 0px; */
+    /* margin-top: 10px; */
+}
+
+.res-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.res-head{
+    /* padding-left: 20px; */
+    margin-top: -20px;
+    margin-left: -30px;
+    width: 98.5%;
+    background-color: transparent;
+    /* margin-right: -20px; */
+    justify-content: start;
+    display: none;
+    position: fixed;
+}
+
+.res-profile h2  {
+    /* margin: 5px 0; */
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.res-profile p{
+    font-size: 12px;
+    color: #888;
+}
+        .hamburger {
+            display: none;
+            position: fixed;
+            top: 15px;
+            right: 25px;
+            z-index: 1000;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .hamburger i {
+            font-size: 1.5rem;
+        }
+
+        
+        .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-left: 0px;
+    color: white;
+    margin-top: 70px;
+    /* padding-right: 20px; */
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    /* 0px; */
+    text-align: start;
+}
+
+h1 span {
+    font-size: 0.5em;
+    font-weight: normal;
+    vertical-align: super;
+    /* text-align: start; */
+    /* justify-content: start; */
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-align: start;
+}
+
+.tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tool {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    /* border: 1px solid #888; */
+    padding: 10px;
+    border-radius: 10px;
+    width: 750px;
+}
+/* .tool {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    /* background-color: #181818; */
+    /* border-bottom: 1px solid #888; */
+    /* margin-left: -10px; */
+    /* gap: 9px; */
+    /* padding-left: 0px; */
+    /* width: 100%; */
+/* } */ */
+
+.tool h2 {
+            margin: 5px 0;
+            font-size: 15px;
+            color: #fff;
+text-align: start;
+        }
+
+        .tool p {
+            font-size: 12px;
+            color: #888;
+            text-align: start;
+            /* margin-left: 15px; */
+        }
+.tool img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.tool:hover{
+   background-color: #5555550c;
+}
+
+.devices {
+    margin-top: 50px;
+    /* margin-left: -450px; */
+}
+
+.devices ul {
+    list-style: none;
+    padding: 0;
+    text-align: start;
+}
+
+.devices li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+/* Behance */
+
+
+/* .text-container {
+    max-width: 50%;
+} */
+
+
+
+
+
+
+.join-container{
+    background-color: transparent;
+    border: 0.5px solid #758694;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 50px 20px;
+    width: 70%;
+    /* max-width: 600px; */
+    text-align: center;
+    top: 200px;
+}
+
+.join-container h3 {
+    margin: 0 0 10px;
+    color: white;
+    text-align: start;
+}
+
+.join-container p{
+    text-align: start;
+    color: #888;
+}
+
+.join-button{
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Added to make the button stretch to full width */
+    box-sizing: border-box;
+}
+/* Footer */
+
+footer {
+    background-color: transparent;
+    padding: 2px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    margin-bottom: 20px;
+    justify-content: center;
+    /* margin-left: 200px; */
+}
+
+footer p {
+    margin: 0;
+    color: #bbbbbb;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.phone-footer {
+            background-color: #181818;
+            border-top: 1px solid #888;
+            margin-left: -20px;
+            /* margin-right: 20px; */
+            width: 96.5%;
+            height: 45px;
+            /* display: none; */
+            /* margin-top: 20px; */
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+        }
+        .phone-footer a {
+            text-decoration: none;
+            color: #888;
+            text-align: center;
+            flex: 1;
+        }
+
+        @media (min-width:520px) {
+            .phone-footer{
+                display: none;
+            }
+        }
+        @media (max-width: 1000px) {
+            .sidebar {
+                transform: translateX(-100%);
+                display: none;
+            }
+            .sidebar.open{
+                transform: translateX(0);
+            }
+            .hamburger {
+                display: block;
+            }
+            .res-head{
+                display: block;
+                /* transform: translateX(-100%); */
+            }
+
+
+            .main-content {
+                margin-left: 0px;
+                width: 100%;
+                padding: 20px;
+            }
+
+            .featured-work {
+                padding-left: 25px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                /* margin-left: 2.8%; */
+            }
+
+            .featured-work-item {
+                /* width: calc(50% - 20px); */
+                width: 400px;
+            }
+        }
+
+        @media(min-width:1000px) and (max-width:1280px){
+            .main-content{
+                margin-left: 350px;
+            }
+        }
+
+        /* @media (max-width: 8000px) {
+    .tool {
+        width: 100%;
+    }
+} */
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+            .main-content {
+                margin-left: 0;
+                padding: 20px;
+                text-align: left;
+            }
+
+            .res-head{
+                width: 98.5%;
+            }
+
+            .featured-work {
+                padding-left: 20px;
+                width: 100%;
+            }
+
+            .featured-work-item {
+                /* width: calc(50% - 20px); */
+                width: 75%;
+            }
+
+            .btn-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        @media (max-width:720px){
+            .res-head{
+                width: 98%;
+            }
+        }
+        @media (max-width:700px){
+            .tool{
+                width: 100%;
+            }
+        }
+
+        /* @media (min-width:700px){
+            .tool{
+                width: 300px;
+            }
+        } */
+        @media (max-width: 480px) {
+            .featured-work-item {
+                flex-grow: 1;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    
+    
+    <!-- <div class="responsive-profile">
+        <img src="profile.jpg" alt="Vedant Jamwal" class="profile-img">
+        <div class="profile-info">
+            <h1>Vedant Jamwal</h1>
+            <p>Top 3% Globally</p>
+        </div>
+    </div> -->
+    
+
+
+    <div class="sidebar">
+        <div class="profile">
+            <img src="https://images.pexels.com/photos/6000789/pexels-photo-6000789.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="ThoufiqM_">
+            <h2>Thoufiq M<p>Product Designer<br></p></h2>
+        <!-- </div> -->
+        <!-- <div class="profile-p"> -->
+            <!-- <p>Product Designer<br></p> -->
+        </div>
+        <nav>
+            <a href="index.html" class=""><i class="fas fa-compass"></i> Explore</a>
+            <a href="Allworks.html"><i class="fas fa-briefcase"></i> Work</a>
+            <!-- <a href="#"><i class="fas fa-store"></i> Boutique <span style="background-color: #1DB954; border-radius: 8px; padding: 2px 5px; font-size: 12px; margin-left: 5px;">NEW</span></a> -->
+            <a href="#"> <i class="fa-brands fa-youtube"></i>Youtube Journey</a>
+            <!-- <a href="#"><i class="fa-solid fa-person"></i>Testimonails</a> -->
+            <a href="#" class="explore"><i class="fas fa-cogs"></i>Tech Stack</a>
+        </nav>
+        <div class="heading">About Me</div>
+        <div class="resources">
+            <a href="#"><i class="fa-solid fa-address-card"></i>About Me</a>
+            <!-- <a href="#"><i class="fa-solid fa-chess-king"></i>Experiences</a> -->
+            <!-- <a href="#"><i class="fa-solid fa-computer"></i>Skills</a> -->
+        </div>
+        <div class="heading">Resources</div>
+        <div class="resources">
+            <a href="#"><i class="fas fa-file-alt"></i> Resume</a>
+            <a href="#"><i class="fas fa-calendar-alt"></i> Book a call</a>
+        </div>
+        <div class="heading">Socials</div>
+        <div class="socials">
+            <a href="https://www.youtube.com/@ThoufiqM_"> <i class="fa-brands fa-youtube"></i>Youtube</a>
+            <!-- <a href="#"><i class="fab fa-dribbble"></i> Youtube</a> -->
+            <a href="#"><i class="fab fa-behance"></i> Behance</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+    </div>
+
+    
+    <div class="main-content">
+
+       <div class="res-head">
+            <div class="res-profile">
+                <img src="https://images.pexels.com/photos/6000789/pexels-photo-6000789.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="ThoufiqM_">
+                <h2 >Thoufiq M<p style="font-size: 12px; color: #888;">Product Designer<br></p></h2>
+            <!-- </div> -->
+            <!-- <div class="profile-p"> -->
+                <!-- <p>Product Designer<br></p> -->
+            </div>
+        </div>
+
+        <div class="container">
+            <section class="stack">
+                <h1>Stack</h1>
+                <p>Tools I use & love that you should check out 🔧</p>
+                <div class="tools">
+                    <div class="tool">
+                        <img src="https://imgs.search.brave.com/xJSSW5DrOZXWIpwgRvB37xSz1Ork2VD7jiAAheQhyCs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jbXMt/YXNzZXRzLnR1dHNw/bHVzLmNvbS9jZG4t/Y2dpL2ltYWdlL3dp/ZHRoPTQwMC91cGxv/YWRzL3VzZXJzLzcx/L2NvdXJzZXMvMTIz/MS9wcmV2aWV3X2lt/YWdlL2JleW9uZC10/aGUtYmFzaWNzLWZp/Z21hLTQwMHgyNzcu/cG5n" alt="Figma">
+                        <!-- <span>Figma<br>Design Tool</span> -->
+                        <h2 style="font-size: 1rem; text-align: left;">Figma<p>Design tool<br></p></h2>
+                    </div>
+                    <div class="tool">
+                        <img src="https://imgs.search.brave.com/dmicHIFmbFGKzFBUnXPXllcKN3s0M3y7SrXUYOmA5Tc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L0ZM/UUVUVVJ0NUNFbXpL/S0VxUFo0YVMtMzIw/LTgwLmpwZw" alt="Adobe CC">
+                        <!-- <span>Adobe CC<br>Design Tool</span> -->
+                        <h2 style="font-size: 1rem; text-align: left;">Adobe CC<p>Design tool<br></p></h2>
+                    </div>
+                    <div class="tool">
+                        <img src="https://imgs.search.brave.com/d5wa0Tn0_cUxrEgpnlYP0xodIoyTxnTAOsuu8ue0N_4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/d2lrLmNvbS9jb250/ZW50L3VwbG9hZHMv/aW1hZ2VzL2ZyYW1l/cjIxNDYuanBn" alt="Framer">
+                        <!-- <span>Framer<br>Website Builder</span> -->
+                        <h2 style="font-size: 1rem; text-align: left;">Framer<p>Website Builder<br></p></h2>
+                    </div>
+                    <div class="tool">
+                        <img src="https://imgs.search.brave.com/WSarawXmeDoUZwMLbrkKNk4tAu9QwGxQmdu5GHJS6k4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cHJvbXB0Z2FpYS5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjMvMDQvbG9nbzAz/LmpwZw" alt="Midjourney">
+                        <!-- <span>Midjourney<br>AI Generative Tool</span> -->
+                        <h2 style="font-size: 1rem; text-align: left;">Midjourney<p>AI Generative tool<br></p></h2>
+                    </div>
+                    <div class="tool">
+                        <img src="https://imgs.search.brave.com/WSarawXmeDoUZwMLbrkKNk4tAu9QwGxQmdu5GHJS6k4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cHJvbXB0Z2FpYS5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjMvMDQvbG9nbzAz/LmpwZw" alt="Calendly">
+                        <!-- <span>Calendly<br>Calendar</span> -->
+                        <h2 style="font-size: 1rem; text-align: left;">Topmate<p>Calender<br></p></h2>
+                    </div>
+                    <div class="tool">
+                        <img src="https://imgs.search.brave.com/WSarawXmeDoUZwMLbrkKNk4tAu9QwGxQmdu5GHJS6k4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cHJvbXB0Z2FpYS5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjMvMDQvbG9nbzAz/LmpwZw" alt="Arc">
+                        <!-- <span>Arc<br>Browser</span> -->
+                        <h2 style="font-size: 1rem; text-align: left;">Arc<p>Browser<br></p></h2>
+                    </div>
+                </div>
+            </section>
+            <section class="devices">
+                <h1>Devices I use.<span> is love.</span></h1>
+                <p>What I use for everyday to supercharge my work ⚡</p>
+                <ul>
+                    <li>MacBook Pro 14” (2022) - 32GB RAM</li>
+                    <li>iPad Pro M1 (2022) - 10.9” Display</li>
+                    <li>iMac M1 - 24” (2022) - 16GB RAM</li>
+                </ul>
+            </section>
+        </div>
+
+
+       
+
+        <div class="join-container">
+            <h3>Join 1.4K+ Smart UX Designers & Developers</h3>
+            <p>Join the community of freelancers who believe in 'Working Smart' & 'Not Hard'.</p>
+            <button class="join-button">Join Now</button>
+        </div>
+    
+    
+        
+    
+        <!-- Footer -->
+
+        <footer>
+            <p>Lets <a href="#">Chat</a> ◦ ©2023 Portfolio</p>
+        </footer>
+
+        <!-- Phone Footer -->
+         <div class="phone-footer">
+            <!-- <p>Let's <a href="#">Chat</a> ◦ 2023 Portfolio -->
+                <a href="https://www.youtube.com/@ThoufiqM_"> <i class="fa-brands fa-youtube"></i>Youtube</a>
+                <!-- <a href="#"><i class="fab fa-dribbble"></i> Youtube</a> -->
+                <a href="#"><i class="fab fa-behance"></i> Behance</a>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+
+         </div>
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const sidebar = document.querySelector('.sidebar');
+        let sidebarOpen = false;
+
+        hamburger.addEventListener('click', () => {
+            sidebarOpen = !sidebarOpen;
+            if (sidebarOpen) {
+                sidebar.style.transform = 'translateX(0)';
+                sidebar.style.display = 'flex';
+            } else {
+                sidebar.style.transform = 'translateX(-100%)';
+                sidebar.style.display = 'none';
+            }
+        });
+
+        var typing=new Typed(".typing",{
+            strings:["Mobile Apps","Web Apps","Websites"],
+            typeSpeed:100,
+            BackSpeed:20,
+            loop:true
+        })
+    </script>
+</body>
+</html>

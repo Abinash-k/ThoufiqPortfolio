@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thoufiq - Product Designer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -15,9 +15,10 @@
         }
 
         body {
+            font-family: 'IBM Plex Sans', sans-serif;
             /* font-family: 'Helvetica Neue', Arial, sans-serif; */
             /* body { */
-  font-family: 'Helvetica Neue', Arial, 'Roboto', 'Proxima Nova', 'Open Sans', sans-serif;
+  /* font-family: 'Helvetica Neue', Arial, 'Roboto', 'Proxima Nova', 'Open Sans', sans-serif; */
 /* } */
 
             background-color: #181818;
@@ -29,7 +30,7 @@
         }
 
         .sidebar {
-            width: 200px;
+            width: 240px;
             background-color: #141414;
             padding: 20px;
             height: 100vh;
@@ -54,36 +55,36 @@
 
             display: flex;
     align-items: center;
+    /* margin-top: ; */
     /* background-color: #181818; */
     /* border-bottom: 1px solid #888; */
     margin-left: -10px;
     gap: 9px;
     padding-left: 0px;
-    margin-top: -8px;
         }
 
         .sidebar .profile img {
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            margin-top: -20px;
+            margin-bottom: 10px;
         }
 
         .sidebar .profile h2 {
             margin: 5px 0;
-            font-size: 16px;
+            font-size: 1rem;
             color: #fff;
-            margin-top: 25px;
         }
 
         .sidebar .profile p {
-            font-size: 12px;
+            font-size: 0.8rem;
             color: #888;
         }
 
         .sidebar nav {
-            margin-bottom: 20px;
-            font-size: 13px;
+            /* margin-bottom: -80px; */
+            font-size: 0.8rem;
+            margin-top: -40px;
         }
 
         .sidebar nav a {
@@ -110,6 +111,8 @@
         .sidebar .socials {
             display: flex;
             flex-direction: column;
+            margin-top: 30px;
+            /* margin-bottom: -40px; */
         }
 
         .sidebar .resources a,
@@ -117,7 +120,7 @@
             color: #888;
             text-decoration: none;
             padding: 8px 12px;
-            font-size: 13px;
+            font-size: 0.8rem;
             display: flex;
             align-items: center;
             justify-content: flex-start;
@@ -126,11 +129,14 @@
             box-sizing: border-box;
             transition: color 0.3s;
             margin-bottom: 0px;
+            /* padding-top: 20px; */
+            /* margin-top: -20px; */
         }
 
         .sidebar .resources a i,
         .sidebar .socials a i {
             margin-right: 12px;
+            /* margin-top: -20px; */
         }
 
         .sidebar .resources a:hover,
@@ -140,11 +146,13 @@
 
         .sidebar .heading {
             text-transform: uppercase;
-            font-size: 12px;
+            font-size: 0.9rem;
             color: #888;
             margin: 10px 0 5px 0;
+            margin-bottom: -50px;
             padding-left: 10px;
         }
+
 
         .explore {
     display: inline-block;
@@ -207,7 +215,7 @@
 }
 .res-head{
     /* padding-left: 20px; */
-    margin-top: -20px;
+    margin-top: -22px;
     margin-left: -30px;
     width: 98.5%;
     background-color: transparent;
@@ -220,12 +228,12 @@
 .res-profile h2  {
     /* margin: 5px 0; */
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 1rem;
     color: #fff;
 }
 
 .res-profile p{
-    font-size: 12px;
+    font-size: 0.2rem;
     color: #888;
 }
         .hamburger {
@@ -270,14 +278,14 @@ h1 span {
 
 p {
     font-size: 1.2em;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: start;
 }
 
 .tools {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 8px;
 }
 
 .tool {
@@ -305,13 +313,13 @@ p {
 
 .tool h2 {
             margin: 5px 0;
-            font-size: 15px;
+            font-size: 1rem;
             color: #fff;
 text-align: start;
         }
 
         .tool p {
-            font-size: 12px;
+            font-size: 0.8rem;
             color: #888;
             text-align: start;
             /* margin-left: 15px; */
@@ -442,7 +450,20 @@ footer a:hover {
             text-align: center;
             flex: 1;
         }
+        .phone-active i{
+    color: rgb(255, 255, 255);
+    background-color: #303030;
+    width: 38px;
+    border-radius:20px;
+    height: 38px;
+    padding-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
+.phone-active i:hover{
+    background-color: #3b82f6;
+}
         @media (min-width:520px) {
             .phone-footer{
                 display: none;
@@ -568,7 +589,7 @@ footer a:hover {
     
 
 
-    <div class="sidebar">
+    <div class="sidebar" style="font-family: 'IBM Ples sans',sans-serif">
         <div class="profile">
             <img src="https://images.pexels.com/photos/6000789/pexels-photo-6000789.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="ThoufiqM_">
             <h2>Thoufiq M<p>Product Designer<br></p></h2>
@@ -577,26 +598,27 @@ footer a:hover {
             <!-- <p>Product Designer<br></p> -->
         </div>
         <nav>
-            <a href="index.html" class=""><i class="fas fa-compass"></i> Explore</a>
+            <a href="index.html" class="explore"><i class="fas fa-compass"></i> Explore</a>
             <a href="Allworks.html"><i class="fas fa-briefcase"></i> Work</a>
             <!-- <a href="#"><i class="fas fa-store"></i> Boutique <span style="background-color: #1DB954; border-radius: 8px; padding: 2px 5px; font-size: 12px; margin-left: 5px;">NEW</span></a> -->
-            <a href="#"> <i class="fa-brands fa-youtube"></i>Youtube Journey</a>
+            <!-- <a href="#"> <i class="fa-brands fa-youtube"></i>Youtube Journey</a> -->
             <!-- <a href="#"><i class="fa-solid fa-person"></i>Testimonails</a> -->
-            <a href="#" class="explore"><i class="fas fa-cogs"></i>Tech Stack</a>
+            <!-- <a href="Stack.html"><i class="fas fa-cogs"></i>Tech Stack</a> -->
+            <a href="About.html"><i class="fa-solid fa-address-card"></i>About Me</a>
         </nav>
-        <div class="heading">About Me</div>
-        <div class="resources">
-            <a href="#"><i class="fa-solid fa-address-card"></i>About Me</a>
+        <!-- <div class="heading">About Me</div> -->
+        <!-- <div class="resources"> -->
+            <!-- <a href="#"><i class="fa-solid fa-address-card"></i>About Me</a> -->
             <!-- <a href="#"><i class="fa-solid fa-chess-king"></i>Experiences</a> -->
             <!-- <a href="#"><i class="fa-solid fa-computer"></i>Skills</a> -->
-        </div>
-        <div class="heading">Resources</div>
+        <!-- </div> -->
+        <div class="heading" style="margin-top: -40px;">Resources</div>
         <div class="resources">
-            <a href="#"><i class="fas fa-file-alt"></i> Resume</a>
+            <a href="#" style="margin-top: -20px;"><i class="fas fa-file-alt"></i> Resume</a>
             <a href="#"><i class="fas fa-calendar-alt"></i> Book a call</a>
         </div>
-        <div class="heading">Socials</div>
-        <div class="socials">
+        <div class="heading" style="margin-top: -30px; margin-bottom: -70px;">Socials</div>
+        <div class="socials" style="margin-bottom: 180px;">
             <a href="https://www.youtube.com/@ThoufiqM_"> <i class="fa-brands fa-youtube"></i>Youtube</a>
             <!-- <a href="#"><i class="fab fa-dribbble"></i> Youtube</a> -->
             <a href="#"><i class="fab fa-behance"></i> Behance</a>
@@ -606,9 +628,9 @@ footer a:hover {
     </div>
 
     
-    <div class="main-content">
+    <div class="main-content" style="font-family: 'IBM Ples sans',sans-serif">
 
-       <div class="res-head">
+       <div class="res-head" style="font-family: 'IBM Ples sans',sans-serif">
             <div class="res-profile">
                 <img src="https://images.pexels.com/photos/6000789/pexels-photo-6000789.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="ThoufiqM_">
                 <h2 >Thoufiq M<p style="font-size: 12px; color: #888;">Product Designer<br></p></h2>
@@ -618,44 +640,44 @@ footer a:hover {
             </div>
         </div>
 
-        <div class="container">
-            <section class="stack">
-                <h1>Stack</h1>
-                <p>Tools I use & love that you should check out 🔧</p>
+        <div class="container" style="font-family: 'IBM Ples sans',sans-serif">
+            <section class="stack" style="font-family: 'IBM Ples sans',sans-serif">
+                <h1 style="font-family: 'IBM Ples sans',sans-serif">Stack</h1>
+                <p style="font-family: 'IBM Ples sans',sans-serif">Tools I use & love that you should check out 🔧</p>
                 <div class="tools">
-                    <div class="tool">
+                    <div class="tool" style="font-family: 'IBM Ples sans',sans-serif">
                         <img src="https://imgs.search.brave.com/xJSSW5DrOZXWIpwgRvB37xSz1Ork2VD7jiAAheQhyCs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jbXMt/YXNzZXRzLnR1dHNw/bHVzLmNvbS9jZG4t/Y2dpL2ltYWdlL3dp/ZHRoPTQwMC91cGxv/YWRzL3VzZXJzLzcx/L2NvdXJzZXMvMTIz/MS9wcmV2aWV3X2lt/YWdlL2JleW9uZC10/aGUtYmFzaWNzLWZp/Z21hLTQwMHgyNzcu/cG5n" alt="Figma">
                         <!-- <span>Figma<br>Design Tool</span> -->
-                        <h2 style="font-size: 1rem; text-align: left;">Figma<p>Design tool<br></p></h2>
+                        <h2 style="font-size: 1rem; text-align: left; margin-top: 20px;">Figma<p>Design tool<br></p></h2>
                     </div>
-                    <div class="tool">
+                    <div class="tool" style="font-family: 'IBM Ples sans',sans-serif">
                         <img src="https://imgs.search.brave.com/dmicHIFmbFGKzFBUnXPXllcKN3s0M3y7SrXUYOmA5Tc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L0ZM/UUVUVVJ0NUNFbXpL/S0VxUFo0YVMtMzIw/LTgwLmpwZw" alt="Adobe CC">
                         <!-- <span>Adobe CC<br>Design Tool</span> -->
-                        <h2 style="font-size: 1rem; text-align: left;">Adobe CC<p>Design tool<br></p></h2>
+                        <h2 style="font-size: 1rem; text-align: left; margin-top: 20px;">Adobe CC<p>Design tool<br></p></h2>
                     </div>
-                    <div class="tool">
+                    <div class="tool" style="font-family: 'IBM Ples sans',sans-serif">
                         <img src="https://imgs.search.brave.com/d5wa0Tn0_cUxrEgpnlYP0xodIoyTxnTAOsuu8ue0N_4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/d2lrLmNvbS9jb250/ZW50L3VwbG9hZHMv/aW1hZ2VzL2ZyYW1l/cjIxNDYuanBn" alt="Framer">
                         <!-- <span>Framer<br>Website Builder</span> -->
-                        <h2 style="font-size: 1rem; text-align: left;">Framer<p>Website Builder<br></p></h2>
+                        <h2 style="font-size: 1rem; text-align: left; margin-top: 20px;">Framer<p>Website Builder<br></p></h2>
                     </div>
-                    <div class="tool">
+                    <div class="tool" style="font-family: 'IBM Ples sans',sans-serif">
                         <img src="https://imgs.search.brave.com/WSarawXmeDoUZwMLbrkKNk4tAu9QwGxQmdu5GHJS6k4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cHJvbXB0Z2FpYS5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjMvMDQvbG9nbzAz/LmpwZw" alt="Midjourney">
                         <!-- <span>Midjourney<br>AI Generative Tool</span> -->
-                        <h2 style="font-size: 1rem; text-align: left;">Midjourney<p>AI Generative tool<br></p></h2>
+                        <h2 style="font-size: 1rem; text-align: left; margin-top: 20px;">Midjourney<p>AI Generative tool<br></p></h2>
                     </div>
-                    <div class="tool">
+                    <div class="tool" style="font-family: 'IBM Ples sans',sans-serif">
                         <img src="https://imgs.search.brave.com/WSarawXmeDoUZwMLbrkKNk4tAu9QwGxQmdu5GHJS6k4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cHJvbXB0Z2FpYS5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjMvMDQvbG9nbzAz/LmpwZw" alt="Calendly">
                         <!-- <span>Calendly<br>Calendar</span> -->
-                        <h2 style="font-size: 1rem; text-align: left;">Topmate<p>Calender<br></p></h2>
+                        <h2 style="font-size: 1rem; text-align: left; margin-top: 20px;">Topmate<p>Calender<br></p></h2>
                     </div>
-                    <div class="tool">
+                    <div class="tool" style="font-family: 'IBM Ples sans',sans-serif">
                         <img src="https://imgs.search.brave.com/WSarawXmeDoUZwMLbrkKNk4tAu9QwGxQmdu5GHJS6k4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cHJvbXB0Z2FpYS5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjMvMDQvbG9nbzAz/LmpwZw" alt="Arc">
                         <!-- <span>Arc<br>Browser</span> -->
-                        <h2 style="font-size: 1rem; text-align: left;">Arc<p>Browser<br></p></h2>
+                        <h2 style="font-size: 1rem; text-align: left; margin-top: 20px;">Arc<p>Browser<br></p></h2>
                     </div>
                 </div>
             </section>
-            <section class="devices">
+            <section class="devices" style="font-family: 'IBM Ples sans',sans-serif">
                 <h1>Devices I use.<span> is love.</span></h1>
                 <p>What I use for everyday to supercharge my work ⚡</p>
                 <ul>
@@ -669,7 +691,7 @@ footer a:hover {
 
        
 
-        <div class="join-container">
+        <div class="join-container" style="font-family: 'IBM Ples sans',sans-serif">
             <h3>Join 1.4K+ Smart UX Designers & Developers</h3>
             <p>Join the community of freelancers who believe in 'Working Smart' & 'Not Hard'.</p>
             <button class="join-button">Join Now</button>
@@ -680,18 +702,18 @@ footer a:hover {
     
         <!-- Footer -->
 
-        <footer>
+        <footer style="font-family: 'IBM Ples sans',sans-serif">
             <p>Lets <a href="#">Chat</a> ◦ ©2023 Portfolio</p>
         </footer>
 
         <!-- Phone Footer -->
-         <div class="phone-footer">
+        <div class="phone-footer">
             <!-- <p>Let's <a href="#">Chat</a> ◦ 2023 Portfolio -->
-                <a href="https://www.youtube.com/@ThoufiqM_"> <i class="fa-brands fa-youtube"></i>Youtube</a>
-                <!-- <a href="#"><i class="fab fa-dribbble"></i> Youtube</a> -->
-                <a href="#"><i class="fab fa-behance"></i> Behance</a>
-                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="Allworks.html"><i class="fas fa-briefcase"></i></a>
+                <a href="About.html"><i class="fa-solid fa-address-card"></i></a>
+                <a href="#" class="phone-active"><i class="fa-solid fa-house"></i></a>
+                <a href="#"><i class="fa-solid fa-phone"></i></a>
+                <a href="mailto:thoufiqthedesigner@gmail.com"><i class="fa-solid fa-envelope"></i></a>
 
          </div>
 

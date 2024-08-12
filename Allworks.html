@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thoufiq - Product Designer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -15,9 +16,10 @@
         }
 
         body {
+            font-family: 'IBM Plex Sans', sans-serif;
             /* font-family: 'Helvetica Neue', Arial, sans-serif; */
             /* body { */
-  font-family: 'Helvetica Neue', Arial, 'Roboto', 'Proxima Nova', 'Open Sans', sans-serif;
+  /* font-family: 'Helvetica Neue', Arial, 'Roboto', 'Proxima Nova', 'Open Sans', sans-serif; */
 /* } */
 
             background-color: #181818;
@@ -29,7 +31,7 @@
         }
 
         .sidebar {
-            width: 200px;
+            width: 240px;
             background-color: #141414;
             padding: 20px;
             height: 100vh;
@@ -46,8 +48,15 @@
         }
 
         .sidebar .profile {
+            /* text-align: center;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px; */
+
             display: flex;
     align-items: center;
+    /* margin-top: ; */
     /* background-color: #181818; */
     /* border-bottom: 1px solid #888; */
     margin-left: -10px;
@@ -64,18 +73,19 @@
 
         .sidebar .profile h2 {
             margin: 5px 0;
-            font-size: 16px;
+            font-size: 1rem;
             color: #fff;
         }
 
         .sidebar .profile p {
-            font-size: 12px;
+            font-size: 0.8rem;
             color: #888;
         }
 
         .sidebar nav {
-            margin-bottom: 20px;
+            /* margin-bottom: -80px; */
             font-size: 13px;
+            margin-top: -40px;
         }
 
         .sidebar nav a {
@@ -98,6 +108,52 @@
             color: #fff;
         }
 
+        .sidebar .resources,
+        .sidebar .socials {
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+            /* margin-bottom: -40px; */
+        }
+
+        .sidebar .resources a,
+        .sidebar .socials a {
+            color: #888;
+            text-decoration: none;
+            padding: 8px 12px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            border-radius: 6px;
+            box-sizing: border-box;
+            transition: color 0.3s;
+            margin-bottom: 0px;
+            /* padding-top: 20px; */
+            /* margin-top: -20px; */
+        }
+
+        .sidebar .resources a i,
+        .sidebar .socials a i {
+            margin-right: 12px;
+            /* margin-top: -20px; */
+        }
+
+        .sidebar .resources a:hover,
+        .sidebar .socials a:hover {
+            color: #fff;
+        }
+
+        .sidebar .heading {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            color: #888;
+            margin: 10px 0 5px 0;
+            margin-bottom: -50px;
+            padding-left: 10px;
+        }
+ 
         .explore {
     display: inline-block;
     color: #ffffff;
@@ -119,47 +175,6 @@
     background-color: transparent;
     color: #888;
 }
-
-
-        .sidebar .resources,
-        .sidebar .socials {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .sidebar .resources a,
-        .sidebar .socials a {
-            color: #888;
-            text-decoration: none;
-            padding: 8px 12px;
-            font-size: 13px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            width: 100%;
-            border-radius: 6px;
-            box-sizing: border-box;
-            transition: color 0.3s;
-            margin-bottom: 0px;
-        }
-
-        .sidebar .resources a i,
-        .sidebar .socials a i {
-            margin-right: 12px;
-        }
-
-        .sidebar .resources a:hover,
-        .sidebar .socials a:hover {
-            color: #fff;
-        }
-
-        .sidebar .heading {
-            text-transform: uppercase;
-            font-size: 12px;
-            color: #888;
-            margin: 10px 0 5px 0;
-            padding-left: 10px;
-        }
 
         .main-content {
             /* padding-top: 10px; */
@@ -192,7 +207,7 @@
 }
 .res-head{
     /* padding-left: 20px; */
-    margin-top: -25px;
+    margin-top: -22px;
     margin-left: -30px;
     width: 98.5%;
     background-color: transparent;
@@ -204,13 +219,13 @@
 
 .res-profile h2  {
     /* margin: 5px 0; */
-    margin-top: 20px;
-    font-size: 16px;
+    margin-top: 27px;
+    font-size: 1rem;
     color: #fff;
 }
 
 .res-profile p{
-    font-size: 12px;
+    font-size: 0.8rem;
     color: #888;
 }
         .typing{
@@ -229,7 +244,7 @@
             color: #fff;
             border-radius: 25px;
             padding: 5px 15px;
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: bold;
             position: relative;
             margin-bottom: 20px;
@@ -303,7 +318,7 @@
     padding: 15px 25px;
     border-top: 1.5px solid #ffa500;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
@@ -429,101 +444,9 @@
             text-align: start;
         }
 /* Behance */
-.behance-box {
-    background-color: transparent; /* Slightly lighter background for the box */
-    border-radius: 8px;
-    border: 1px solid #888;
-    padding: 20px;
-    margin: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.text-container {
-    max-width: 70%;
-}
 
-.description {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: start;
-    /* color: #0046cc; */
-}
 
-.sub-description {
-    font-size: 14px;
-    margin-bottom: 0;
-    /* color: #888; */
-}
-
-.behance-button {
-    background-color: #0057ff; /* Behance blue color */
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-.behance-button:hover {
-    background-color: #0046cc; /* Darker blue on hover */
-}
-
-.yt-container {
-            /* max-width: 800px; */
-            width: 90%;
-            /* margin: 0 auto; */
-            padding-top: 100px;
-            /* padding-bottom: 100px; */
-            justify-content: start;
-            text-align: start;
-            margin-left: 15px;
-        }
-
-        .yt-new-badge {
-            display: inline-block;
-            background-color: transparent;
-            border: 1px solid #00ff4ccd;
-            color: #ffffff;
-            padding: 5px 10px;
-            border-radius: 10px;
-            font-size: 12px;
-            margin-bottom: 10px;
-        }
-
-        .yt-title {
-            font-size: 32px;
-            margin: 10px 0;
-            color: white;
-        }
-
-        .yt-description {
-            font-size: 18px;
-            margin: 10px 0 20px;
-            color: white;
-        }
-
-        .yt-image-container {
-            display: flex;
-            gap: 20px;
-        }
-
-        .yt-image-container div {
-    width: 50%;
-    height: 50%;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.yt-image-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
 
         /* .yt-footer {
             margin-top: 20px;
@@ -562,92 +485,6 @@
     /* padding-top: 100px; */
 /* }  */
 
-.stack-container{
-    background-color: transparent; /* Slightly lighter background for the box */
-    border-radius: 8px;
-    border: 1px solid #888;
-    padding: 20px;
-    margin: 20px;
-    margin-top: 100px;
-    /* display: flex; */
-    justify-content: space-between;
-    align-items: center;
-}
-
-.join-container{
-    background-color: transparent;
-    border: 0.5px solid #758694;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 50px 20px;
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    top: 200px;
-}
-
-.stack-container h2, .join-container h3 {
-    margin: 0 0 10px;
-    color: white;
-    text-align: start;
-}
-
-.stack-container p, .join-container p{
-    text-align: start;
-    color: #888;
-}
-
-.tool {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-}
-
-.tool img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-
-.tool div h3 {
-    margin: 0;
-    font-size: 18px;
-    color: white;
-    /* padding-left: 20px; */
-}
-
-.tool div p {
-    margin: 0;
-    font-size: 14px;
-    color: #bbbbbb;
-    padding-left: 20px;
-}
-
-.all-tools-button {
-    background-color: #9d9d9d85;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-top: 20px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%; /* Added to make the button stretch to full width */
-    box-sizing: border-box;
-}
-
-.join-button{
-    background-color: #3b82f6;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-top: 20px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%; /* Added to make the button stretch to full width */
-    box-sizing: border-box;
-}
 
 /* Maincontenst */
 .header {
@@ -658,13 +495,13 @@
 }
 
 .header h1 {
-    font-size: 36px;
+    font-size: 2rem;
     line-height: 1.2;
     margin-top: 100px;
 }
 
 .header p {
-    font-size: 18px;
+    font-size: 1.2rem;
     margin-top: 20px;
     line-height: 1.5;
 }
@@ -681,7 +518,7 @@
     padding: 15px 25px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
@@ -837,7 +674,20 @@ footer a:hover {
             text-align: center;
             flex: 1;
         }
+        .phone-active i{
+    color: rgb(255, 255, 255);
+    background-color: #303030;
+    width: 38px;
+    border-radius:20px;
+    height: 38px;
+    padding-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
+.phone-active i:hover{
+    background-color: #3b82f6;
+}
         @media (min-width:520px) {
             .phone-footer{
                 display: none;
@@ -941,9 +791,9 @@ footer a:hover {
         <i class="fas fa-bars"></i>
     </div>
 
-    <div class="sidebar">
+    <div class="sidebar" style="font-family: 'IBM Ples sans',sans-serif">
         <div class="profile">
-            <img src="https://images.pexels.com/photos/6000789/pexels-photo-6000789.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Vedant Jamwal">
+            <img src="https://images.pexels.com/photos/6000789/pexels-photo-6000789.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="ThoufiqM_">
             <h2>Thoufiq M<p>Product Designer<br></p></h2>
         <!-- </div> -->
         <!-- <div class="profile-p"> -->
@@ -951,25 +801,26 @@ footer a:hover {
         </div>
         <nav>
             <a href="index.html"><i class="fas fa-compass"></i> Explore</a>
-            <a href="#" class="explore active"><i class="fas fa-briefcase"></i> Work</a>
+            <a href="#" class="explore"><i class="fas fa-briefcase"></i> Work</a>
             <!-- <a href="#"><i class="fas fa-store"></i> Boutique <span style="background-color: #1DB954; border-radius: 8px; padding: 2px 5px; font-size: 12px; margin-left: 5px;">NEW</span></a> -->
-            <a href="#"> <i class="fa-brands fa-youtube"></i>Youtube Journey</a>
+            <!-- <a href="#"> <i class="fa-brands fa-youtube"></i>Youtube Journey</a> -->
             <!-- <a href="#"><i class="fa-solid fa-person"></i>Testimonails</a> -->
-            <a href="Stack.html"><i class="fas fa-cogs"></i>Tech Stack</a>
+            <!-- <a href="Stack.html"><i class="fas fa-cogs"></i>Tech Stack</a> -->
+            <a href="About.html"><i class="fa-solid fa-address-card"></i>About Me</a>
         </nav>
-        <div class="heading">About Me</div>
-        <div class="resources">
-            <a href="#"><i class="fa-solid fa-address-card"></i>About Me</a>
+        <!-- <div class="heading">About Me</div> -->
+        <!-- <div class="resources"> -->
+            <!-- <a href="#"><i class="fa-solid fa-address-card"></i>About Me</a> -->
             <!-- <a href="#"><i class="fa-solid fa-chess-king"></i>Experiences</a> -->
             <!-- <a href="#"><i class="fa-solid fa-computer"></i>Skills</a> -->
-        </div>
-        <div class="heading">Resources</div>
+        <!-- </div> -->
+        <div class="heading" style="margin-top: -40px;">Resources</div>
         <div class="resources">
-            <a href="#"><i class="fas fa-file-alt"></i> Resume</a>
-            <a href="#"><i class="fas fa-calendar-alt"></i> Book a call</a>
+            <a href="#" style="margin-top: -20px;"><i class="fas fa-file-alt"></i> Resume</a>
+            <a href="https://topmate.io/thoufiq_m"><i class="fas fa-calendar-alt"></i> Book a call</a>
         </div>
-        <div class="heading">Socials</div>
-        <div class="socials">
+        <div class="heading" style="margin-top: -30px; margin-bottom: -70px;">Socials</div>
+        <div class="socials" style="margin-bottom: 180px;">
             <a href="https://www.youtube.com/@ThoufiqM_"> <i class="fa-brands fa-youtube"></i>Youtube</a>
             <!-- <a href="#"><i class="fab fa-dribbble"></i> Youtube</a> -->
             <a href="#"><i class="fab fa-behance"></i> Behance</a>
@@ -981,26 +832,26 @@ footer a:hover {
     <div class="main-content">
         <div class="res-head">
             <div class="res-profile">
-                <img src="https://images.pexels.com/photos/6000789/pexels-photo-6000789.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="ThoufiqM_">
+                <img src="https://images.pexels.com/photos/6000789/pexels-photo-6000789.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="ThoufiqM_" style="margin-top: 17px; margin-bottom: 12px;">
                 <h2 >Thoufiq M<p style="font-size: 12px; color: #888;">Product Designer<br></p></h2>
             <!-- </div> -->
             <!-- <div class="profile-p"> -->
                 <!-- <p>Product Designer<br></p> -->
             </div>
         </div>
-        <div class="container">
+        <div class="container" style="font-family: 'IBM Ples sans',sans-serif">
            
-            <div class="header">
+            <div class="header" style="font-family: 'IBM Ples sans',sans-serif">
                 <h1>Best Work</h1>
                 <p>Partnered with inspiring collaborators, innovators & brands ✨</p>
                 <p>Ps: I also have an extensive network of Product Designers, Front-end Developers, and amazing individuals who can assist you in building your dream product. So, you should definitely book a call. 😊</p>
                 <div class="buttons">
-                    <a href="#">Book Call</a>
+                    <a href="https://topmate.io/thoufiq_m">Book Call</a>
                     <a href="#">E-Mail</a>
                 </div>
             </div>
             <a href="workspages.html" class="work-item-link">
-                <div class="work-item">
+                <div class="work-item" style="font-family: 'IBM Ples sans',sans-serif">
                     <img src="https://imgs.search.brave.com/FtJ0f51iAzqo8bsJVqsJNiiH-LgnTHdYXOomJwCmL9w/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/YS1kcm9wLW9mLXBp/bmstYW5kLXllbGxv/dy1wYWludC1pbi13/YXRlci5qcGc_d2lk/dGg9MTAwMCZmb3Jt/YXQ9cGpwZyZleGlm/PTAmaXB0Yz0w" alt="Project Image">
                     <div class="work-item-content">
                         <h3>Lead Designer — Memri Connect (Regenerative AI)</h3>
@@ -1010,7 +861,7 @@ footer a:hover {
                 </div>
             </a>
             <a href="workspages.html" class="work-item-link">
-                <div class="work-item">
+                <div class="work-item" style="font-family: 'IBM Ples sans',sans-serif">
                     <img src="https://imgs.search.brave.com/FtJ0f51iAzqo8bsJVqsJNiiH-LgnTHdYXOomJwCmL9w/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/YS1kcm9wLW9mLXBp/bmstYW5kLXllbGxv/dy1wYWludC1pbi13/YXRlci5qcGc_d2lk/dGg9MTAwMCZmb3Jt/YXQ9cGpwZyZleGlm/PTAmaXB0Yz0w" alt="Project Image">
                     <div class="work-item-content">
                         <h3>Lead Designer — Memri Connect (Regenerative AI)</h3>
@@ -1023,18 +874,18 @@ footer a:hover {
            
         </div>
 
-        <footer>
+        <footer style="font-family: 'IBM Ples sans',sans-serif">
             <p>Lets <a href="#">Chat</a> ◦ ©2023 Portfolio</p>
         </footer>
 
         <!-- Phone Footer -->
-         <div class="phone-footer">
+        <div class="phone-footer">
             <!-- <p>Let's <a href="#">Chat</a> ◦ 2023 Portfolio -->
-                <a href="https://www.youtube.com/@ThoufiqM_"> <i class="fa-brands fa-youtube"></i>Youtube</a>
-                <!-- <a href="#"><i class="fab fa-dribbble"></i> Youtube</a> -->
-                <a href="#"><i class="fab fa-behance"></i> Behance</a>
-                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#" class="phone-active"><i class="fas fa-briefcase"></i></a>
+                <a href="About.html"><i class="fa-solid fa-address-card"></i></a>
+                <a href="index.html"><i class="fa-solid fa-house"></i></a>
+                <a href="#"><i class="fa-solid fa-phone"></i></a>
+                <a href="mailto:thoufiqthedesigner@gmail.com"><i class="fa-solid fa-envelope"></i></a>
 
          </div>
     </div>

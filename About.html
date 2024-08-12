@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoufiq - Product Designer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            /* font-family: 'Helvetica Neue', Arial, sans-serif; */
+            /* body { */
+  /* font-family: 'Helvetica Neue', Arial, 'Roboto', 'Proxima Nova', 'Open Sans', sans-serif; */
+/* } */
+
+            background-color: #181818;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 240px;
+            background-color: #141414;
+            padding: 20px;
+            height: 100vh;
+            overflow-y: auto;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+            z-index: 200;
+        }
+
+        .sidebar .profile {
+            /* text-align: center;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px; */
+
+            display: flex;
+    align-items: center;
+    /* margin-top: ; */
+    /* background-color: #181818; */
+    /* border-bottom: 1px solid #888; */
+    margin-left: -10px;
+    gap: 9px;
+    padding-left: 0px;
+        }
+
+        .sidebar .profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .sidebar .profile h2 {
+            margin: 5px 0;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .sidebar .profile p {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .sidebar nav {
+            /* margin-bottom: -80px; */
+            font-size: 0.8rem;
+            margin-top: -40px;
+        }
+
+        .sidebar nav a {
+            color: #888;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-bottom: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar nav a i {
+            margin-right: 12px;
+        }
+
+        .sidebar nav a:hover {
+            background-color: #282828;
+            color: #fff;
+        }
+
+        .sidebar .resources,
+        .sidebar .socials {
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+            /* margin-bottom: -40px; */
+        }
+
+        .sidebar .resources a,
+        .sidebar .socials a {
+            color: #888;
+            text-decoration: none;
+            padding: 8px 12px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            border-radius: 6px;
+            box-sizing: border-box;
+            transition: color 0.3s;
+            margin-bottom: 0px;
+            /* padding-top: 20px; */
+            /* margin-top: -20px; */
+        }
+
+        .sidebar .resources a i,
+        .sidebar .socials a i {
+            margin-right: 12px;
+            /* margin-top: -20px; */
+        }
+
+        .sidebar .resources a:hover,
+        .sidebar .socials a:hover {
+            color: #fff;
+        }
+
+        .sidebar .heading {
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            color: #888;
+            margin: 10px 0 5px 0;
+            margin-bottom: -50px;
+            padding-left: 10px;
+        }
+
+        .explore {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid #5555554c;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.explore:hover {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+.explore.active {
+    background-color: transparent;
+    color: #888;
+}
+
+
+        .main-content {
+            /* padding-top: 10px; */
+            /* padding: 20px; */
+            text-align: center;
+            overflow-y: auto;
+            height: 100vh;
+            margin-left: 280px;
+            margin-top: 4px;
+            transition: margin-left 0.3s ease;
+            /* padding-left: 220px; */
+        }
+
+
+
+
+.res-profile {
+    display: flex;
+    align-items: center;
+    background-color: #181818;
+    border-bottom: 1px solid #888;
+    margin-left: 10px;
+    padding-left: 0px;
+    width: 99%;
+    /* margin-left: 0px; */
+    /* margin-top: 10px; */
+}
+
+.res-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.res-head{
+    /* padding-left: 20px; */
+    margin-top: -22px;
+    margin-left: -30px;
+    width: 99%;
+    background-color:transparent;
+    /* margin-right: -20px; */
+    justify-content: start;
+    display: none;
+    position: fixed;
+}
+
+.res-profile h2  {
+    /* margin: 5px 0; */
+    margin-top: 1px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.res-profile p{
+    font-size: 0.8rem;
+    color: #888;
+}
+
+
+
+        .hamburger {
+            display: none;
+            position: fixed;
+            top: 15px;
+            right: 25px;
+            z-index: 1000;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .hamburger i {
+            font-size: 1.5rem;
+        }
+
+/* About */
+.container{
+    margin-top: 10%;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    justify-content: start;
+    width: 80%;
+    margin-left: 20px;
+}
+.container .Name{
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: bold;
+}
+.container .Bio{
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    width: 100%;
+}
+
+.container .image{
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #adadad6c;
+    box-shadow: #fff;
+}
+.container .caption{
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    width: 100%;
+}
+.container .content{
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    width: 100%;
+}
+/* Footer */
+
+footer {
+    background-color: transparent;
+    padding: 2px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    margin-bottom: 40px;
+}
+
+footer p {
+    margin: 0;
+    color: #bbbbbb;
+}
+
+footer a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.phone-footer {
+            background-color: #181818;
+            border-top: 1px solid #888;
+            margin-left: -20px;
+            /* margin-right: 20px; */
+            width: 96.5%;
+            height: 45px;
+            /* display: none; */
+            /* margin-top: 20px; */
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+        }
+        .phone-footer a {
+            text-decoration: none;
+            color: #888;
+            text-align: center;
+            flex: 1;
+        }
+
+.phone-active i{
+    color: rgb(255, 255, 255);
+    background-color: #303030;
+    width: 38px;
+    border-radius:20px;
+    height: 38px;
+    padding-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.phone-active i:hover{
+    background-color: #3b82f6;
+}
+
+        @media (min-width:520px) {
+            .phone-footer{
+                display: none;
+            }
+        }
+
+        /* @media (max-width:520px){
+            .res-head{
+                width: 100%;
+            }
+        } */
+        @media (max-width: 1000px) {
+            .sidebar {
+                transform: translateX(-100%);
+                display: none;
+            }
+            .sidebar.open{
+                transform: translateX(0);
+            }
+            .container .image{
+                width: 70%;
+            }
+            .hamburger {
+                display: block;
+            }
+            .res-head{
+                display: block;
+                /* transform: translateX(-100%); */
+            }
+            
+            .container{
+                margin-top: 20%;
+            }
+
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+                padding: 20px;
+            }
+
+            .featured-work {
+                padding-left: 25px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                /* margin-left: 2.8%; */
+            }
+
+            .featured-work-item {
+                /* width: calc(50% - 20px); */
+                width: 400px;
+            }
+            
+        }
+
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 20px;
+                text-align: left;
+            }
+
+            .res-head{
+                width: 98.5%;
+            }
+
+            .featured-work {
+                padding-left: 20px;
+                width: 100%;
+            }
+
+            .featured-work-item {
+                /* width: calc(50% - 20px); */
+                width: 75%;
+            }
+
+            .btn-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width:720px){
+            .res-head{
+                width: 97.3%;
+            }
+            .container .image{
+                width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            .featured-work-item {
+                flex-grow: 1;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    
+    
+    <!-- <div class="responsive-profile">
+        <img src="profile.jpg" alt="Vedant Jamwal" class="profile-img">
+        <div class="profile-info">
+            <h1>Vedant Jamwal</h1>
+            <p>Top 3% Globally</p>
+        </div>
+    </div> -->
+    
+
+
+    <div class="sidebar" style="font-family: 'IBM Ples sans',sans-serif">
+        <div class="profile">
+            <img src="https://images.pexels.com/photos/6000789/pexels-photo-6000789.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="ThoufiqM_">
+            <h2>Thoufiq M<p>Product Designer<br></p></h2>
+        <!-- </div> -->
+        <!-- <div class="profile-p"> -->
+            <!-- <p>Product Designer<br></p> -->
+        </div>
+        <nav>
+            <a href="index.html" ><i class="fas fa-compass"></i> Explore</a>
+            <a href="Allworks.html" ><i class="fas fa-briefcase"></i> Work</a>
+            <!-- <a href="#"><i class="fas fa-store"></i> Boutique <span style="background-color: #1DB954; border-radius: 8px; padding: 2px 5px; font-size: 12px; margin-left: 5px;">NEW</span></a> -->
+            <!-- <a href="#"> <i class="fa-brands fa-youtube"></i>Youtube Journey</a> -->
+            <!-- <a href="#"><i class="fa-solid fa-person"></i>Testimonails</a> -->
+            <!-- <a href="Stack.html"><i class="fas fa-cogs"></i>Tech Stack</a> -->
+            <a href="#" class="explore"><i class="fa-solid fa-address-card"></i>About Me</a>
+        </nav>
+        <!-- <div class="heading">About Me</div> -->
+        <!-- <div class="resources"> -->
+            <!-- <a href="#"><i class="fa-solid fa-address-card"></i>About Me</a> -->
+            <!-- <a href="#"><i class="fa-solid fa-chess-king"></i>Experiences</a> -->
+            <!-- <a href="#"><i class="fa-solid fa-computer"></i>Skills</a> -->
+        <!-- </div> -->
+        <div class="heading" style="margin-top: -40px;">Resources</div>
+        <div class="resources">
+            <a href="#" style="margin-top: -20px;"><i class="fas fa-file-alt"></i> Resume</a>
+            <a href="#"><i class="fas fa-calendar-alt"></i> Book a call</a>
+        </div>
+        <div class="heading" style="margin-top: -30px; margin-bottom: -70px;">Socials</div>
+        <div class="socials" style="margin-bottom: 180px;">
+            <a href="https://www.youtube.com/@ThoufiqM_"> <i class="fa-brands fa-youtube"></i>Youtube</a>
+            <!-- <a href="#"><i class="fab fa-dribbble"></i> Youtube</a> -->
+            <a href="#"><i class="fab fa-behance"></i> Behance</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+    </div>
+
+    
+    <div class="main-content">
+
+       <div class="res-head" style="font-family: 'IBM Ples sans',sans-serif">
+            <div class="res-profile">
+                <img src="https://images.pexels.com/photos/6000789/pexels-photo-6000789.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="ThoufiqM_" style="margin-top: 10px; margin-bottom: 12px;">
+                <h2 >Thoufiq M<p style="font-size: 12px; color: #888;">Product Designer<br></p></h2>
+            <!-- </div> -->
+            <!-- <div class="profile-p"> -->
+                <!-- <p>Product Designer<br></p> -->
+            </div>
+        </div>
+<!-- About Section -->
+<div class="container" style="font-family: 'IBM Ples sans',sans-serif">
+    <div class="Name" style="font-family: 'IBM Ples sans',sans-serif">About Thoufiq</div>
+    <div class="Bio" style="font-family: 'IBM Ples sans',sans-serif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, eveniet? Possimus deserunt incidunt hic ipsam impedit rerum, itaque unde debitis nihil facere nemo minus numquam quia ab ad nam! Fugiat?</div>
+    <img src="https://imgs.search.brave.com/FtJ0f51iAzqo8bsJVqsJNiiH-LgnTHdYXOomJwCmL9w/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/YS1kcm9wLW9mLXBp/bmstYW5kLXllbGxv/dy1wYWludC1pbi13/YXRlci5qcGc_d2lk/dGg9MTAwMCZmb3Jt/YXQ9cGpwZyZleGlm/PTAmaXB0Yz0w" alt="Product Designer" class="image">
+    <div class="caption" style="font-family: 'IBM Ples sans',sans-serif">
+        With a background in product design, I thrive on crafting digital experiences that seamlessly blend aesthetics, functionality, and user-centered design principles. My journey in the world of design has equipped me with a keen eye for detail, a deep understanding of user behavior, and the ability to transform complex concepts into intuitive, visually appealing products.
+    </div>
+    <div class="content" style="font-family: 'IBM Ples sans',sans-serif">
+        What sets me apart is my expertise in no-code development. I believe that technology should be accessible to all, regardless of technical expertise. By harnessing the potential of no-code tools, I...
+    </div>
+</div>
+        
+    
+        <!-- Footer -->
+
+        <footer style="font-family: 'IBM Ples sans',sans-serif">
+            <p>Lets <a href="#">Chat</a> ◦ ©2023 Portfolio</p>
+        </footer>
+
+        <!-- Phone Footer -->
+         <div class="phone-footer">
+            <!-- <p>Let's <a href="#">Chat</a> ◦ 2023 Portfolio -->
+                <a href="Allworks.html"><i class="fas fa-briefcase"></i></a>
+                <a href="#" class="phone-active"><i class="fa-solid fa-address-card"></i></a>
+                <a href="index.html"><i class="fa-solid fa-house"></i></a>
+                <a href="#"><i class="fa-solid fa-phone"></i></a>
+                <a href="mailto:thoufiqthedesigner@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                
+
+         </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const sidebar = document.querySelector('.sidebar');
+        let sidebarOpen = false;
+
+        hamburger.addEventListener('click', () => {
+            sidebarOpen = !sidebarOpen;
+            if (sidebarOpen) {
+                sidebar.style.transform = 'translateX(0)';
+                sidebar.style.display = 'flex';
+            } else {
+                sidebar.style.transform = 'translateX(-100%)';
+                sidebar.style.display = 'none';
+            }
+        });
+
+        var typing=new Typed(".typing",{
+            strings:["Mobile Apps","Web Apps","Websites"],
+            typeSpeed:100,
+            BackSpeed:20,
+            loop:true
+        })
+    </script>
+</body>
+</html>

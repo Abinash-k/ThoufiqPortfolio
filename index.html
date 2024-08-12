@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thoufiq - Product Designer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
 
     <style>
         * {
@@ -15,9 +17,12 @@
         }
 
         body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            /* font-weight: bold; */
             /* font-family: 'Helvetica Neue', Arial, sans-serif; */
             /* body { */
-  font-family: 'Helvetica Neue', Arial, 'Roboto', 'Proxima Nova', 'Open Sans', sans-serif;
+  /* font-family: 'Helvetica Neue', Arial, 'Roboto', 'Proxima Nova', 'Open Sans', sans-serif; */
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 /* } */
 
             background-color: #181818;
@@ -29,7 +34,7 @@
         }
 
         .sidebar {
-            width: 200px;
+            width: 240px;
             background-color: #141414;
             padding: 20px;
             height: 100vh;
@@ -43,6 +48,7 @@
             justify-content: space-between;
             transition: transform 0.3s ease;
             z-index: 200;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .sidebar .profile {
@@ -71,18 +77,19 @@
 
         .sidebar .profile h2 {
             margin: 5px 0;
-            font-size: 16px;
+            font-size: 1rem;
             color: #fff;
         }
 
         .sidebar .profile p {
-            font-size: 12px;
+            font-size: 0.8rem;
             color: #888;
         }
 
         .sidebar nav {
-            margin-bottom: 20px;
-            font-size: 13px;
+            /* margin-bottom: -80px; */
+            font-size: 0.8rem;
+            margin-top: -40px;
         }
 
         .sidebar nav a {
@@ -109,6 +116,8 @@
         .sidebar .socials {
             display: flex;
             flex-direction: column;
+            margin-top: 30px;
+            /* margin-bottom: -40px; */
         }
 
         .sidebar .resources a,
@@ -116,7 +125,7 @@
             color: #888;
             text-decoration: none;
             padding: 8px 12px;
-            font-size: 13px;
+            font-size: 0.8rem;
             display: flex;
             align-items: center;
             justify-content: flex-start;
@@ -125,11 +134,14 @@
             box-sizing: border-box;
             transition: color 0.3s;
             margin-bottom: 0px;
+            /* padding-top: 20px; */
+            /* margin-top: -20px; */
         }
 
         .sidebar .resources a i,
         .sidebar .socials a i {
             margin-right: 12px;
+            /* margin-top: -20px; */
         }
 
         .sidebar .resources a:hover,
@@ -139,9 +151,10 @@
 
         .sidebar .heading {
             text-transform: uppercase;
-            font-size: 12px;
+            font-size: 0.9rem;
             color: #888;
             margin: 10px 0 5px 0;
+            margin-bottom: -50px;
             padding-left: 10px;
         }
 
@@ -174,9 +187,10 @@
             text-align: center;
             overflow-y: auto;
             height: 100vh;
-            margin-left: 240px;
+            margin-left: 280px;
             margin-top: 4px;
             transition: margin-left 0.3s ease;
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
             /* padding-left: 220px; */
         }
 
@@ -204,7 +218,7 @@
 }
 .res-head{
     /* padding-left: 20px; */
-    margin-top: -20px;
+    margin-top: -22px;
     margin-left: -30px;
     width: 99%;
     background-color:transparent;
@@ -217,12 +231,12 @@
 .res-profile h2  {
     /* margin: 5px 0; */
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 1rem;
     color: #fff;
 }
 
 .res-profile p{
-    font-size: 12px;
+    font-size: 0.8rem;
     color: #888;
 }
         .typing{
@@ -243,7 +257,7 @@
             border-radius: 25px;
             /* width: 195px; */
             padding: 5px 15px;
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: bold;
             /* position: relative; */
             margin-bottom: 20px;
@@ -317,7 +331,7 @@
     padding: 15px 25px;
     border-top: 1.5px solid #ffa500;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
@@ -377,6 +391,7 @@
             font-size: 1rem;
             margin-bottom: 10px;
             color: #fff;
+            margin-left: -20px;
         }
 
         .work-company {
@@ -400,8 +415,8 @@
         }
 
         .case-study-btn:hover {
-            background-color: #1DB954;
-            border-color: #1DB954;
+            background-color: #505050d7;
+            border-color: #505050d7;
             color: #000;
         }
 
@@ -460,7 +475,7 @@
 }
 
 .description {
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: start;
@@ -468,7 +483,7 @@
 }
 
 .sub-description {
-    font-size: 14px;
+    font-size: 0.9rem;
     margin-bottom: 0;
     /* color: #888; */
 }
@@ -480,7 +495,7 @@
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     transition: background-color 0.3s;
 }
 
@@ -490,7 +505,8 @@
 
 .yt-container {
             /* max-width: 800px; */
-            width: 90%;
+            width: 100%;
+            /* height: 80px; */
             /* margin: 0 auto; */
             padding-top: 100px;
             /* padding-bottom: 100px; */
@@ -507,40 +523,45 @@
             color: #ffffff;
             padding: 5px 10px;
             border-radius: 10px;
-            font-size: 12px;
+            font-size: 0.8rem;
             margin-bottom: 10px;
         }
 
         .yt-title {
-            font-size: 32px;
+            font-size: 2rem;
             margin: 10px 0;
             color: white;
         }
 
         .yt-description {
-            font-size: 18px;
+            font-size: 1.2rem;
             margin: 10px 0 20px;
             color: white;
         }
 
         .yt-image-container {
             display: flex;
-            gap: 20px;
+            gap: 40px;
             /* padding-left: 20px; */
         }
 
         .yt-image-container div {
-    width: 50%;
-    height: 50%;
+    width:60%;
+    height:65%;
     border-radius: 10px;
-    padding: 20px;
+    padding: 40px;
     padding-left: 0px;
+    /* padding-right: 10px; */
 }
 
 .yt-image-container img {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    /* padding-right: 20px; */
+    /* margin-right: 20px; */
+    gap: 10px;
+    display: flex;
 }
 
         /* .yt-footer {
@@ -606,6 +627,7 @@
 
 .stack-container h2, .join-container h3 {
     margin: 0 0 10px;
+    /* margin-left: 80px; */
     color: white;
     text-align: start;
 }
@@ -628,17 +650,21 @@
 }
 
 .tool div h3 {
-    margin: 0;
-    font-size: 18px;
+    margin-left: 20px;
+    text-align: start;
+    font-size: 1.2rem;
     color: white;
+
     /* padding-left: 20px; */
 }
 
 .tool div p {
-    margin: 0;
-    font-size: 14px;
+    /* margin-left: 10px; */
+    font-size: 0.9rem;
     color: #bbbbbb;
-    padding-left: 20px;
+    text-align: start;
+    /* justify-content: center; */
+    /* padding-left: 20px; */
 }
 
 .all-tools-button {
@@ -649,7 +675,7 @@
     padding: 10px 20px;
     margin-top: 20px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     width: 100%; /* Added to make the button stretch to full width */
     box-sizing: border-box;
 }
@@ -662,7 +688,7 @@
     padding: 10px 20px;
     margin-top: 20px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     width: 100%; /* Added to make the button stretch to full width */
     box-sizing: border-box;
 }
@@ -717,17 +743,32 @@ footer a:hover {
             flex: 1;
         }
 
+.phone-active i{
+    color: rgb(255, 255, 255);
+    background-color: #303030;
+    width: 38px;
+    border-radius:20px;
+    height: 38px;
+    padding-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.phone-active i:hover{
+    background-color: #3b82f6;
+}
+
         @media (min-width:520px) {
             .phone-footer{
                 display: none;
-            }
+            } 
         }
 
-        /* @media (max-width:520px){
+        @media (max-width:520px){
             .res-head{
                 width: 100%;
             }
-        } */
+        }
         @media (max-width: 1000px) {
             .sidebar {
                 transform: translateX(-100%);
@@ -770,7 +811,9 @@ footer a:hover {
             .sidebar {
                 width: 200px;
             }
-
+            .yt-image-container img{
+                width: 110%;
+            }
             .main-content {
                 margin-left: 0;
                 padding: 20px;
@@ -799,7 +842,7 @@ footer a:hover {
 
         @media (max-width:720px){
             .res-head{
-                width: 98%;
+                width: 97.3%;
             }
         }
         @media (max-width: 480px) {
@@ -807,6 +850,57 @@ footer a:hover {
                 flex-grow: 1;
                 width: 100%;
             }
+             .yt-image-container div {
+    /* width:50%; */
+    /* height:50%; */
+    /* border-radius: 10px; */
+    padding: 0px;
+    /* padding-left: 0px; */
+    /* padding-right: 10px;  */
+    margin-right: -25px;
+} 
+
+.yt-image-container img {
+    width: 140px;
+    height: auto;
+    border-radius: 10px
+}
+
+
+
+  }
+
+@media screen and (max-width:580px){
+    .ready-to-interview{
+        margin-top: 40px;
+    }
+}
+        @media screen and (max-width: 700px) {
+    .behance-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .behance-button {
+        width: 100%;
+        margin-top: 15px; /* Adds space between text and button */
+        text-align: center;
+    }
+
+    .text-container {
+        max-width: 100%;
+    }
+}
+
+        @media (max-width:320px){
+            /* .main-content-top{
+                margin-top: 200px;
+                margin-bottom: 180px;
+            } */
+            .yt-image-container img{
+                width: 110px;
+            }
+            
         }
     </style>
 </head>
@@ -839,23 +933,24 @@ footer a:hover {
             <a href="#" class="explore"><i class="fas fa-compass"></i> Explore</a>
             <a href="Allworks.html"><i class="fas fa-briefcase"></i> Work</a>
             <!-- <a href="#"><i class="fas fa-store"></i> Boutique <span style="background-color: #1DB954; border-radius: 8px; padding: 2px 5px; font-size: 12px; margin-left: 5px;">NEW</span></a> -->
-            <a href="#"> <i class="fa-brands fa-youtube"></i>Youtube Journey</a>
+            <!-- <a href="#"> <i class="fa-brands fa-youtube"></i>Youtube Journey</a> -->
             <!-- <a href="#"><i class="fa-solid fa-person"></i>Testimonails</a> -->
-            <a href="Stack.html"><i class="fas fa-cogs"></i>Tech Stack</a>
+            <!-- <a href="Stack.html"><i class="fas fa-cogs"></i>Tech Stack</a> -->
+            <a href="About.html"><i class="fa-solid fa-address-card"></i>About Me</a>
         </nav>
-        <div class="heading">About Me</div>
-        <div class="resources">
-            <a href="#"><i class="fa-solid fa-address-card"></i>About Me</a>
+        <!-- <div class="heading">About Me</div> -->
+        <!-- <div class="resources"> -->
+            <!-- <a href="#"><i class="fa-solid fa-address-card"></i>About Me</a> -->
             <!-- <a href="#"><i class="fa-solid fa-chess-king"></i>Experiences</a> -->
             <!-- <a href="#"><i class="fa-solid fa-computer"></i>Skills</a> -->
-        </div>
-        <div class="heading">Resources</div>
+        <!-- </div> -->
+        <div class="heading" style="margin-top: -40px;">Resources</div>
         <div class="resources">
-            <a href="#"><i class="fas fa-file-alt"></i> Resume</a>
-            <a href="#"><i class="fas fa-calendar-alt"></i> Book a call</a>
+            <a href="#" style="margin-top: -20px;"><i class="fas fa-file-alt"></i> Resume</a>
+            <a href="https://topmate.io/thoufiq_m"><i class="fas fa-calendar-alt"></i> Book a call</a>
         </div>
-        <div class="heading">Socials</div>
-        <div class="socials">
+        <div class="heading" style="margin-top: -30px; margin-bottom: -70px;">Socials</div>
+        <div class="socials" style="margin-bottom: 180px;">
             <a href="https://www.youtube.com/@ThoufiqM_"> <i class="fa-brands fa-youtube"></i>Youtube</a>
             <!-- <a href="#"><i class="fab fa-dribbble"></i> Youtube</a> -->
             <a href="#"><i class="fab fa-behance"></i> Behance</a>
@@ -879,23 +974,23 @@ footer a:hover {
 
 
         <div class="main-content-top">
-        <div style="font-family: Arial, sans-serif; background-color: #181818; color: #ffffff; margin: 0; display: flex; justify-content: left; align-items: center; height: 70vh;">
+        <div style="font-family: 'IBM Plex Sans',sans-serif; background-color: #181818; color: #ffffff; margin: 0; display: flex; justify-content: left; align-items: center; height: 70vh;">
             <div style="text-align: start; max-width: 600px;">
                 <div class="ready-to-interview">Ready to interview</div>
-                <div style="font-size: 36px; line-height: 1.2;">
-                    Hey, I'm <span style="font-size: 36px;">Thoufiq</span> 👋<br>
+                <div style="font-size: 2rem; line-height: 1.2;">
+                    Hey, I'm <span style="font-size: 2rem;">Thoufiq</span> 👋<br>
                     I design <strong><span class="typing"></span></strong><br>
                     <!-- & lead design teams. -->
                 </div>
-                <div style="font-size: 18px; margin-top: 20px; line-height: 1.5;">
+                <div style="font-size: 1.2rem; margin-top: 20px; line-height: 1.5; font-family: 'IBM Plex sans',sans-serif;">
                     As a top 3% globally certified product designer, I've built products hands-on and fostered cross-functional collaboration.<br>
                     I'm also a community leader of 1k+ designers & developers.
                 </div>
                 <div style="margin-top: 30px; display: flex; gap: 10px;">
-                    <a href="#" class="button-curve custom-button">Resume</a>
+                    <a href="#" class="button-curve custom-button" style="font-family: 'IBM Ples sans',sans-serif">Resume</a>
                    
                     
-                    <a href="#" style="background-color: #333; color: #fff; padding: 15px 25px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-decoration: none; text-align: center;">Join My Community</a>
+                    <a href="#" style="background-color: #333; color: #fff; padding: 15px 25px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-decoration: none; text-align: center; font-family: 'IBM Plex sans',sans-serif;">Join My Community</a>
                 </div>
             </div>
         </div>
@@ -908,58 +1003,58 @@ footer a:hover {
             <button class="btn btn-primary"><i class="fas fa-rocket"></i> Primary Button</button>
             <button class="btn btn-secondary"><i class="fas fa-info-circle"></i> Secondary Button</button>
         </div> -->
-        <h2 class="featured-work-heading">Featured Work</h2>
+        <h2 class="featured-work-heading" style="font-family: 'IBM Ples sans',sans-serif">Featured Work</h2>
         <div class="featured-work">
             <div class="featured-work-item">
                 <img src="https://images.pexels.com/photos/6000789/pexels-photo-6000789.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Senior Brand & IA Designer — RV 2.0 Launch">
                 <div class="work-info">
-                    <div class="work-title">Senior Brand & IA Designer — RV 2.0 Launch<br><span Style="font-size: 1rem; color: #888;">Real Vision</span></div>
+                    <div class="work-title" style="font-family: 'IBM Ples sans',sans-serif">Senior Brand & IA Designer — RV 2.0 Launch<br><span Style="font-size: 1rem; color: #888;">Real Vision</span></div>
                     <!-- <div class="work-company">Real Vision</div> -->
-                    <button class="case-study-btn">CASE STUDY</button>
+                    <button class="case-study-btn" style="font-family: 'IBM Ples sans',sans-serif">CASE STUDY</button>
                 </div>
             </div>
             <div class="featured-work-item">
                 <img src="https://images.pexels.com/photos/6000789/pexels-photo-6000789.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Lead Designer — ResponseAI eCommerce ChatBot">
                 <div class="work-info">
-                    <div class="work-title">Lead Designer — ResponseAI eCommerce ChatBot<br><span Style="font-size: 1rem; color: #888;">Response AI</span></div>
+                    <div class="work-title" style="font-family: 'IBM Ples sans',sans-serif">Lead Designer — ResponseAI eCommerce ChatBot<br><span Style="font-size: 1rem; color: #888;">Response AI</span></div>
                     <!-- <div class="work-company">ResponseAI</div> -->
-                    <button class="case-study-btn">CASE STUDY</button>
+                    <button class="case-study-btn" style="font-family: 'IBM Ples sans',sans-serif">CASE STUDY</button>
                 </div>
             </div>
             <div class="featured-work-item">
                 <img src="https://images.pexels.com/photos/6000789/pexels-photo-6000789.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Product Designer — SaveIn Product & Brand Launch">
                 <div class="work-info">
-                    <div class="work-title">Product Designer — SaveIn Product & Brand Launch<br><span Style="font-size: 1rem; color: #888;">SaveIn</span></div>
+                    <div class="work-title" style="font-family: 'IBM Ples sans',sans-serif">Product Designer — SaveIn Product & Brand Launch<br><span Style="font-size: 1rem; color: #888;">SaveIn</span></div>
                     <!-- <div class="work-company">SaveIn</div> -->
-                    <button class="case-study-btn">CASE STUDY</button>
+                    <button class="case-study-btn" style="font-family: 'IBM Ples sans',sans-serif">CASE STUDY</button>
                 </div>
             </div>
             <div class="featured-work-item">
                 <img src="https://images.pexels.com/photos/6000789/pexels-photo-6000789.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Visual Designer — Design System Integration">
                 <div class="work-info">
-                    <div class="work-title">Visual Designer — Design System Integration<br><span Style="font-size: 1rem; color: #888;">Udacity</span></div>
+                    <div class="work-title" style="font-family: 'IBM Ples sans',sans-serif">Visual Designer — Design System Integration<br><span Style="font-size: 1rem; color: #888;">Udacity</span></div>
                     <!-- <div class="work-company">Udacity</div> -->
-                    <button class="case-study-btn">CASE STUDY</button>
+                    <button class="case-study-btn" style="font-family: 'IBM Ples sans',sans-serif">CASE STUDY</button>
                 </div>
             </div>
         </div>
         <!-- Behance Link -->
-        <div class="behance-box">
+        <div class="behance-box" style="font-family: 'IBM Ples sans',sans-serif">
             <div class="text-container">
-                <p class="description">Check out my stuff on Behance (1k+ followers)</p>
+                <p class="description" >Check out my stuff on Behance (1k+ followers)</p>
                 <p class="sub-description" style="color: #888;">People like UI8 and other big studios follow me there, drop a follow.</p>
             </div>
-            <a href="https://www.behance.net/yourprofile" class="behance-button" target="_blank">Behance Portfolio</a>
+            <a href="https://www.behance.net/yourprofile" class="behance-button" target="_blank" style="font-family: 'IBM Ples sans',sans-serif">Behance Portfolio</a>
         </div>
 
         <!-- Youtube -->
         <div class="yt-container">
-            <div class="yt-new-badge">NEW</div>
-            <div class="yt-title">Youtube Journey</div>
-            <div class="yt-description">
+            <div class="yt-new-badge" style="font-family: 'IBM Ples sans',sans-serif">NEW</div>
+            <div class="yt-title" style="font-family: 'IBM Ples sans',sans-serif">Youtube Journey</div>
+            <div class="yt-description" style="font-family: 'IBM Ples sans',sans-serif">
                 I was recently given the opportunity to be on Ansh Mehra's podcast (with 300K Subscribers), to talk about UX.
             </div>
-            <div class="yt-image-container">
+            <div class="yt-image-container" style="font-family: 'IBM Ples sans',sans-serif">
                 <div>
                     <a href="https://www.youtube.com/watch?v=VIDEO_ID_1" target="_blank">
                         <img src="https://img.youtube.com/vi/VIDEO_ID_1/0.jpg" alt="Video Thumbnail 1">
@@ -979,41 +1074,43 @@ footer a:hover {
             <!-- Youtube Link -->
             
         </div>
-        <div class="behance-box">
+        <div class="behance-box" style="font-family: 'IBM Ples sans',sans-serif">
             <div class="text-container">
                 <p class="description">Check out my stuff on Behance (1k+ followers)</p>
-                <p class="sub-description" style="color: #888;">People like UI8 and other big studios follow me there, drop a follow.</p>
+                <p class="sub-description" style="color: #888; ">People like UI8 and other big studios follow me there, drop a follow.</p>
             </div>
             <a href="https://www.behance.net/yourprofile" class="behance-button" target="_blank" style="background-color: #ff0000;">Youtube</a>
         </div>
 
         <!-- Tool Stack -->
-        <div class="stack-container">
+        <div class="stack-container" style="font-family: 'IBM Ples sans',sans-serif">
             <h2>Stack</h2>
             <p>Software and resources I use regularly.</p>
             <div class="tool">
                 <img src="https://imgs.search.brave.com/AWK_0cg9Mk4yvKtk5WN72icg5eIYbQTfj5xXV_WlZhs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZHJpYmJibGUuY29t/L3VzZXJ1cGxvYWQv/OTQwODk2Ny9maWxl/L29yaWdpbmFsLWIz/ZWRkMWY2MjU0YjVm/YjhmMzVhN2E0MDQ4/Y2E2MGQ0LnBuZz9y/ZXNpemU9NDAweDA" alt="Figma">
                 <div>
-                    <h3>Figma<br><span style="font-size: 14px; color: #888;">Design Tool</span></h3>
+                    <h5 style="color: white; margin-left: 10px;">Figma<br><span style="font-size: 0.7rem; color: #888;">Design Tool</span></h3>
                     <!-- <p>Design Tool</p> -->
                 </div>
             </div>
             <div class="tool">
                 <img src="https://imgs.search.brave.com/wBVz3t9nVF-yeFrhg71yF7qTI22RbhCWvR5DoCyZh-w/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZnJlZWxvZ292ZWN0/b3JzLm5ldC93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMC8wNy9h/ZG9iZS1jcmVhdGl2/ZS1jbG91ZC1sb2dv/LnBuZw" alt="Adobe CC">
                 <div>
-                    <h3>Adobe CC<br><span style="font-size: 14px; color: #888;">Design Tool</span></h3>
+                    <h5 style="color: white; margin-left: 10px;">Adobe CC<br><span style="font-size: 0.7rem; color: #888;">Design Tool</span></h3>
                 </div>
             </div>
             <div class="tool">
                 <img src="https://imgs.search.brave.com/ZF0-EXsly4SaKDrV31GbIgFYdPKvLlqm5ROE-UlRETg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2tldGNoYXBwc291/cmNlcy5jb20vcmVz/b3VyY2VzL3NvdXJj/ZS1pbWFnZS9uZXct/ZnJhbWVyanMtbG9n/by5qcGc" alt="Framer">
                 <div>
-                    <h3>Framer<br><span style="font-size: 14px; color: #888;">Website Builder</span></h3>
+                    <h5 style="color: white; margin-left: 10px;">Framer<br><span style="font-size: 0.7rem; color: #888;">Website Builder</span></h3>
                 </div>
             </div>
+            <a href="Stack.html">
             <button class="all-tools-button">All Tools</button>
+            </a>
         </div>
     
-        <div class="join-container">
+        <div class="join-container" style="font-family: 'IBM Ples sans',sans-serif">
             <h3>Join 1.4K+ Smart UX Designers & Developers</h3>
             <p>Join the community of freelancers who believe in 'Working Smart' & 'Not Hard'.</p>
             <button class="join-button">Join Now</button>
@@ -1021,18 +1118,18 @@ footer a:hover {
     
         <!-- Footer -->
 
-        <footer>
+        <footer style="font-family: 'IBM Ples sans',sans-serif">
             <p>Lets <a href="#">Chat</a> ◦ ©2023 Portfolio</p>
         </footer>
 
         <!-- Phone Footer -->
          <div class="phone-footer">
             <!-- <p>Let's <a href="#">Chat</a> ◦ 2023 Portfolio -->
-                <a href="https://www.youtube.com/@ThoufiqM_"> <i class="fa-brands fa-youtube"></i>Youtube</a>
-                <!-- <a href="#"><i class="fab fa-dribbble"></i> Youtube</a> -->
-                <a href="#"><i class="fab fa-behance"></i> Behance</a>
-                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="Allworks.html"><i class="fas fa-briefcase"></i></a>
+                <a href="About.html"><i class="fa-solid fa-address-card"></i></a>
+                <a href="#" class="phone-active"><i class="fa-solid fa-house"></i></a>
+                <a href="#"><i class="fa-solid fa-phone"></i></a>
+                <a href="mailto:thoufiqthedesigner@gmail.com"><i class="fa-solid fa-envelope"></i></a>
 
          </div>
     </div>
